@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote, Star } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
@@ -63,9 +65,45 @@ export const TestimonialsSection = () => {
                     {testimonial.relation}
                   </div>
                 </div>
+                
+                {index === 0 && (
+                  <div className="pt-4">
+                    <Button variant="outline" size="sm" className="w-full" asChild>
+                      <Link href="/servicos/diabetes-infantil">
+                        Saiba mais sobre Diabetes Infantil
+                      </Link>
+                    </Button>
+                  </div>
+                )}
+                {index === 1 && (
+                  <div className="pt-4">
+                    <Button variant="outline" size="sm" className="w-full" asChild>
+                      <Link href="/servicos/baixa-estatura">
+                        Saiba mais sobre Crescimento
+                      </Link>
+                    </Button>
+                  </div>
+                )}
+                {index === 2 && (
+                  <div className="pt-4">
+                    <Button variant="outline" size="sm" className="w-full" asChild>
+                      <Link href="/contato">
+                        Agende sua Consulta
+                      </Link>
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <Button size="lg" variant="outline" asChild>
+            <Link href="/sobre#depoimentos">
+              Ver Mais Depoimentos
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

@@ -59,7 +59,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
         <div className="mb-8 rounded-lg overflow-hidden">
           <img
             src={post.featuredImage}
-            alt={post.title}
+            alt={`${post.title} - Artigo sobre ${post.category} por Dra. Giovana Martins, Endocrinologista Pediátrica`}
             className="w-full h-auto object-cover"
           />
         </div>

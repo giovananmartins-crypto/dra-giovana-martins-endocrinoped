@@ -376,3 +376,87 @@ export function ServicesPageSchema() {
   );
 }
 
+/**
+ * Schema Markup para WebPage
+ */
+export function WebPageSchema({
+  name,
+  description,
+  url,
+  image
+}: {
+  name: string;
+  description: string;
+  url: string;
+  image?: string;
+}) {
+  const baseUrl = "https://www.giovanaendocrinoped.com.br";
+  const fullUrl = url.startsWith("http") ? url : `${baseUrl}${url}`;
+  
+  const schema: any = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": name,
+    "description": description,
+    "url": fullUrl,
+    "inLanguage": "pt-BR",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Dra. Giovana Martins - Endocrinologista Pediátrica",
+      "url": baseUrl
+    }
+  };
+
+  if (image) {
+    schema.image = image.startsWith("http") ? image : `${baseUrl}${image}`;
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+/**
+ * Schema Markup para BreadcrumbList
+ */
+export function BreadcrumbSchema({
+  items
+}: {
+  items: Array<{ label: string; href?: string }>;
+}) {
+  const baseUrl = "https://www.giovanaendocrinoped.com.br";
+  
+  // Sempre incluir a homepage como primeiro item
+  const allItems = [
+    { label: "Início", href: "/" },
+    ...items
+  ];
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": allItems.map((item, index) => {
+      const fullUrl = item.href 
+        ? (item.href.startsWith("http") ? item.href : `${baseUrl}${item.href}`)
+        : undefined;
+
+      return {
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": item.label,
+        ...(fullUrl && { "item": fullUrl })
+      };
+    })
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+

@@ -43,3 +43,7 @@ next-env.d.ts
 # documentation (contains SEO strategy and sensitive information)
 /docs
 ROTAS_DO_SITE.md
+
+# README files (ignore all except root)
+**/README.md
+!README.md

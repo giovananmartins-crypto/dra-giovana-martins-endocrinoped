@@ -3,6 +3,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 interface FAQItem {
   question: string;
@@ -93,10 +95,78 @@ export const FAQSection = ({
                   <p className="text-muted-foreground leading-relaxed">
                     {faq.answer}
                   </p>
+                  {index === 0 && (
+                    <div className="mt-4">
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href="/servicos">
+                          Ver Nossos Serviços
+                        </Link>
+                      </Button>
+                    </div>
+                  )}
+                  {index === 2 && (
+                    <div className="mt-4">
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href="/contato">
+                          Agendar Primeira Consulta
+                        </Link>
+                      </Button>
+                    </div>
+                  )}
+                  {index === 3 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href="/servicos/puberdade-precoce">
+                          Puberdade Precoce
+                        </Link>
+                      </Button>
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href="/servicos/diabetes-infantil">
+                          Diabetes Infantil
+                        </Link>
+                      </Button>
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href="/servicos/baixa-estatura">
+                          Baixa Estatura
+                        </Link>
+                      </Button>
+                    </div>
+                  )}
+                  {index === 4 && (
+                    <div className="mt-4">
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href="/contato">
+                          Verificar Convênios
+                        </Link>
+                      </Button>
+                    </div>
+                  )}
+                  {index === 5 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <Button variant="outline" size="sm" asChild>
+                        <Link href="/contato">
+                          Formulário de Contato
+                        </Link>
+                      </Button>
+                      <Button variant="outline" size="sm" asChild>
+                        <a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer">
+                          WhatsApp
+                        </a>
+                      </Button>
+                    </div>
+                  )}
                 </div>
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <Button size="lg" variant="outline" asChild>
+            <Link href="/contato">
+              Tenho Outras Dúvidas - Entre em Contato
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

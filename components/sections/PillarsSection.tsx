@@ -1,5 +1,6 @@
 import { Shield, Heart, Award, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 const pillars = [
   {
@@ -71,6 +72,26 @@ export const PillarsSection = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     {pillar.description}
                   </p>
+                  {pillar.title === "Confiança" && (
+                    <Link href="/sobre" className="text-sm text-primary hover:underline font-medium inline-flex items-center gap-1">
+                      Saiba mais sobre nossa formação →
+                    </Link>
+                  )}
+                  {pillar.title === "Acolhimento" && (
+                    <Link href="/contato" className="text-sm text-primary hover:underline font-medium inline-flex items-center gap-1">
+                      Agende uma consulta →
+                    </Link>
+                  )}
+                  {pillar.title === "Excelência Pediátrica" && (
+                    <Link href="/servicos" className="text-sm text-primary hover:underline font-medium inline-flex items-center gap-1">
+                      Conheça nossos serviços →
+                    </Link>
+                  )}
+                  {pillar.title === "Inovação" && (
+                    <Link href="/blog" className="text-sm text-primary hover:underline font-medium inline-flex items-center gap-1">
+                      Leia nossos artigos →
+                    </Link>
+                  )}
                 </CardContent>
               </Card>
             );

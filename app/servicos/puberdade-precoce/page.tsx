@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { MedicalConditionSchema, FAQPageSchema, ReviewSchema } from "@/lib/schema-markup";
+import { MedicalConditionSchema, FAQPageSchema, ReviewSchema, WebPageSchema } from "@/lib/schema-markup";
 import { generateMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -97,7 +97,12 @@ export default function PuberdadePrecocePage() {
           reviewBody={testimonial.reviewBody}
         />
       ))}
-      
+      <WebPageSchema
+        name="Puberdade Precoce | Dra. Giovana Martins"
+        description="Entenda a puberdade precoce, seus sinais, causas e opções de tratamento. Agende uma consulta com a Dra. Giovana Martins, especialista em Belo Horizonte."
+        url="/servicos/puberdade-precoce"
+        image="https://www.giovanaendocrinoped.com.br/images/servicos/puberdade-precoce-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg"
+      />
       <Header />
       <main>
         {/* Hero Section */}

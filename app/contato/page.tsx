@@ -193,7 +193,7 @@ export default function Contact() {
                             <div className="relative w-4 h-4 mr-2">
                               <Image
                                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
-                                alt=""
+                                alt="WhatsApp"
                                 fill
                                 className="object-contain"
                               />

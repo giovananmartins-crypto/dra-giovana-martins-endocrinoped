@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { MedicalConditionSchema, FAQPageSchema, ReviewSchema } from "@/lib/schema-markup";
+import { MedicalConditionSchema, FAQPageSchema, ReviewSchema, WebPageSchema } from "@/lib/schema-markup";
 import { generateMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -97,7 +97,12 @@ export default function DiabetesInfantilPage() {
           reviewBody={testimonial.reviewBody}
         />
       ))}
-      
+      <WebPageSchema
+        name="Diabetes Infantil | Dra. Giovana Martins"
+        description="Guia completo sobre diabetes infantil (Tipo 1 e 2): sintomas, diagnóstico e tratamento. Conte com a Dra. Giovana Martins, especialista em Belo Horizonte."
+        url="/servicos/diabetes-infantil"
+        image="https://www.giovanaendocrinoped.com.br/images/servicos/diabetes-infantil-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg"
+      />
       <Header />
       <main>
         {/* Hero Section */}

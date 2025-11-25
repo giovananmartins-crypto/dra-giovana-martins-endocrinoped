@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { MedicalConditionSchema, FAQPageSchema, ReviewSchema } from "@/lib/schema-markup";
+import { MedicalConditionSchema, FAQPageSchema, ReviewSchema, WebPageSchema } from "@/lib/schema-markup";
 import { generateMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -97,7 +97,12 @@ export default function BaixaEstaturaPage() {
           reviewBody={testimonial.reviewBody}
         />
       ))}
-      
+      <WebPageSchema
+        name="Baixa Estatura em Crianças | Dra. Giovana Martins"
+        description="Preocupado com a baixa estatura do seu filho? Entenda as causas e tratamentos. Agende uma consulta com a Dra. Giovana Martins em Belo Horizonte."
+        url="/servicos/baixa-estatura"
+        image="https://www.giovanaendocrinoped.com.br/images/servicos/baixa-estatura-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg"
+      />
       <Header />
       <main>
         {/* Hero Section */}

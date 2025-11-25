@@ -19,7 +19,7 @@ const services = [
     icon: Scale,
     title: "Obesidade Pediátrica",
     description: "Abordagem multidisciplinar para controle de peso e hábitos saudáveis",
-    href: "/servicos" // Página ainda não criada
+    href: "/servicos/obesidade-pediatrica"
   },
   {
     icon: Clock,

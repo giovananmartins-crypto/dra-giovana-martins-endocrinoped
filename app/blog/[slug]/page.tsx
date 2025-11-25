@@ -6,7 +6,7 @@ import { BlogPostContent } from "@/components/blog/BlogPostContent";
 import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { CTASection } from "@/components/sections/CTASection";
 import { getPostBySlug, getRelatedPosts } from "@/lib/blog";
-import { ArticleSchema, FAQPageSchema } from "@/lib/schema-markup";
+import { ArticleSchema, FAQPageSchema, WebPageSchema, BreadcrumbSchema } from "@/lib/schema-markup";
 import { generateMetadata as createMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 
@@ -56,6 +56,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         author={post.author.name}
       />
       {post.faqs && post.faqs.length > 0 && <FAQPageSchema faqs={post.faqs} />}
+      <WebPageSchema
+        name={post.seo.metaTitle}
+        description={post.seo.metaDescription}
+        url={`/blog/${slug}`}
+        image={post.featuredImage}
+      />
+      <BreadcrumbSchema
+        items={[
+          { label: "Blog", href: "/blog" },
+          { label: post.title }
+        ]}
+      />
       <Header />
       <main>
         <section className="py-12 bg-card">
