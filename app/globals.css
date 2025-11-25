@@ -1,0 +1,335 @@
+@import "tailwindcss";
+
+/* @theme é uma regra válida do Tailwind CSS 4 - ignorar aviso do linter */
+@theme {
+  /* Cores principais - Light Mode */
+  --color-background: hsl(40 33% 97%);
+  --color-foreground: hsl(0 0% 15%);
+  
+  --color-card: hsl(40 83% 99%);
+  --color-card-foreground: hsl(0 0% 15%);
+  
+  --color-popover: hsl(40 83% 99%);
+  --color-popover-foreground: hsl(0 0% 15%);
+  
+  --color-primary: hsl(357 70% 90%);
+  --color-primary-foreground: hsl(0 0% 15%);
+  
+  --color-secondary: hsl(238 42% 79%);
+  --color-secondary-foreground: hsl(0 0% 15%);
+  
+  --color-muted: hsl(40 33% 97%);
+  --color-muted-foreground: hsl(0 0% 45%);
+  
+  --color-accent: hsl(67 68% 69%);
+  --color-accent-foreground: hsl(0 0% 15%);
+  
+  --color-info: hsl(204 63% 91%);
+  --color-info-foreground: hsl(0 0% 15%);
+  
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(40 83% 99%);
+  
+  --color-border: hsl(357 70% 85%);
+  --color-input: hsl(357 70% 85%);
+  --color-ring: hsl(357 70% 70%);
+  
+  /* Sidebar colors - Light Mode */
+  --color-sidebar: hsl(0 0% 98%);
+  --color-sidebar-foreground: hsl(240 5.3% 26.1%);
+  --color-sidebar-primary: hsl(240 5.9% 10%);
+  --color-sidebar-primary-foreground: hsl(0 0% 98%);
+  --color-sidebar-accent: hsl(240 4.8% 95.9%);
+  --color-sidebar-accent-foreground: hsl(240 5.9% 10%);
+  --color-sidebar-border: hsl(220 13% 91%);
+  --color-sidebar-ring: hsl(217.2 91.2% 59.8%);
+  
+  /* Border radius */
+  --radius: 1rem;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  
+  /* Container */
+  --container-center: true;
+  --container-padding: 2rem;
+  --container-screen-2xl: 1400px;
+  
+  /* Gradientes */
+  --gradient-hero: linear-gradient(135deg, hsl(357 70% 90%) 0%, hsl(204 63% 91%) 100%);
+  --gradient-soft: linear-gradient(180deg, hsl(40 83% 99%) 0%, hsl(40 33% 97%) 100%);
+  
+  /* Sombras */
+  --shadow-soft: 0 4px 20px -4px hsl(357 70% 70% / 0.15);
+  --shadow-medium: 0 8px 30px -6px hsl(357 70% 60% / 0.2);
+  
+  /* Transições */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Animações - Tailwind 4 usa @keyframes diretamente */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-in: fade-in 0.6s ease-out;
+  --animate-fade-in-up: fade-in-up 0.8s ease-out;
+  --animate-scale-in: scale-in 0.5s ease-out;
+  --animate-slide-in-left: slide-in-left 0.6s ease-out;
+  --animate-slide-in-right: slide-in-right 0.6s ease-out;
+}
+
+/* Dark Mode via classe .dark */
+.dark {
+  --color-background: hsl(0 0% 10%);
+  --color-foreground: hsl(40 83% 99%);
+  
+  --color-card: hsl(0 0% 12%);
+  --color-card-foreground: hsl(40 83% 99%);
+  
+  --color-popover: hsl(0 0% 12%);
+  --color-popover-foreground: hsl(40 83% 99%);
+  
+  --color-primary: hsl(357 60% 75%);
+  --color-primary-foreground: hsl(0 0% 10%);
+  
+  --color-secondary: hsl(238 35% 65%);
+  --color-secondary-foreground: hsl(40 83% 99%);
+  
+  --color-muted: hsl(0 0% 18%);
+  --color-muted-foreground: hsl(0 0% 65%);
+  
+  --color-accent: hsl(67 60% 60%);
+  --color-accent-foreground: hsl(0 0% 10%);
+  
+  --color-info: hsl(204 50% 75%);
+  --color-info-foreground: hsl(0 0% 10%);
+  
+  --color-destructive: hsl(0 62.8% 30.6%);
+  --color-destructive-foreground: hsl(40 83% 99%);
+  
+  --color-border: hsl(0 0% 20%);
+  --color-input: hsl(0 0% 20%);
+  --color-ring: hsl(357 60% 65%);
+  
+  /* Sidebar colors - Dark Mode */
+  --color-sidebar: hsl(240 5.9% 10%);
+  --color-sidebar-foreground: hsl(240 4.8% 95.9%);
+  --color-sidebar-primary: hsl(224.3 76.3% 48%);
+  --color-sidebar-primary-foreground: hsl(0 0% 100%);
+  --color-sidebar-accent: hsl(240 3.7% 15.9%);
+  --color-sidebar-accent-foreground: hsl(240 4.8% 95.9%);
+  --color-sidebar-border: hsl(240 3.7% 15.9%);
+  --color-sidebar-ring: hsl(217.2 91.2% 59.8%);
+}
+
+/* Keyframes */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Base styles */
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-geist-sans), 'Inter', Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utility classes para gradientes e sombras */
+.bg-gradient-hero {
+  background-image: var(--gradient-hero);
+}
+
+.bg-gradient-soft {
+  background-image: var(--gradient-soft);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.shadow-medium {
+  box-shadow: var(--shadow-medium);
+}
+
+.transition-smooth {
+  transition: var(--transition-smooth);
+}
+
+/* Classes de animação para uso com Tailwind */
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out;
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+/* Estilos para conteúdo do blog (prose) */
+.blog-content {
+  @apply text-foreground;
+}
+
+.blog-content h2 {
+  @apply text-3xl font-bold mt-8 mb-4 text-foreground;
+}
+
+.blog-content h3 {
+  @apply text-2xl font-bold mt-6 mb-3 text-foreground;
+}
+
+.blog-content h4 {
+  @apply text-xl font-semibold mt-4 mb-2 text-foreground;
+}
+
+.blog-content p {
+  @apply mb-4 leading-relaxed text-foreground;
+}
+
+.blog-content ul,
+.blog-content ol {
+  @apply mb-4 ml-6 space-y-2;
+}
+
+.blog-content li {
+  @apply mb-2 leading-relaxed;
+}
+
+.blog-content a {
+  @apply text-primary hover:underline;
+}
+
+.blog-content strong {
+  @apply font-bold text-foreground;
+}
+
+.blog-content em {
+  @apply italic;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-primary pl-4 italic my-4 text-muted-foreground;
+}
+
+.blog-content code {
+  @apply bg-muted px-2 py-1 rounded text-sm font-mono;
+}
+
+.blog-content pre {
+  @apply bg-muted p-4 rounded-lg overflow-x-auto my-4;
+}
+
+.blog-content pre code {
+  @apply bg-transparent p-0;
+}
+
+.blog-content img {
+  @apply rounded-lg my-6 w-full h-auto;
+}
+
+.blog-content table {
+  @apply w-full border-collapse my-4;
+}
+
+.blog-content th,
+.blog-content td {
+  @apply border border-border px-4 py-2;
+}
+
+.blog-content th {
+  @apply bg-muted font-bold;
+}
