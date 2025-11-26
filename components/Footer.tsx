@@ -3,6 +3,7 @@
 import { Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { analytics } from "@/lib/analytics";
 
 export const Footer = () => {
   return (
@@ -94,6 +95,7 @@ export const Footer = () => {
                     rel="noopener noreferrer"
                     className="w-12 h-12 relative hover:opacity-80 transition-opacity"
                     aria-label="WhatsApp"
+                    onClick={() => analytics.whatsappClick('Footer')}
                   >
                     <Image
                       src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
@@ -108,6 +110,7 @@ export const Footer = () => {
                     rel="noopener noreferrer"
                     className="w-12 h-12 relative hover:opacity-80 transition-opacity"
                     aria-label="Doctoralia"
+                    onClick={() => analytics.doctoraliaClick('Footer')}
                   >
                     <Image
                       src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-doctoralia.png"

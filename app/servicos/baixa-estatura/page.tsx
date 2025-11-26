@@ -8,6 +8,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Phone, MessageCircle, CheckCircle2, AlertCircle, Stethoscope, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { WhatsAppLink } from "@/components/analytics/WhatsAppLink";
+import { PhoneLink } from "@/components/analytics/PhoneLink";
+import { CTALink } from "@/components/analytics/CTALink";
 
 export const metadata: Metadata = generateMetadata({
   title: "Baixa Estatura em Crianças | Diagnóstico e Tratamento | Dra. Giovana Martins BH",
@@ -129,10 +132,10 @@ export default function BaixaEstaturaPage() {
                     className="bg-foreground text-card hover:bg-foreground/90 gap-2 text-lg px-8 py-6"
                     asChild
                   >
-                    <Link href="/contato">
+                    <CTALink href="/contato" label="Baixa Estatura - Hero - Avalie o Crescimento">
                       <Calendar className="h-5 w-5" />
                       Avalie o Crescimento do seu Filho
-                    </Link>
+                    </CTALink>
                   </Button>
                   
                   <Button
@@ -141,10 +144,10 @@ export default function BaixaEstaturaPage() {
                     className="border-2 border-foreground text-foreground hover:bg-foreground/10 text-lg px-8 py-6 gap-2"
                     asChild
                   >
-                    <a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer">
+                    <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Baixa Estatura - Hero">
                       <MessageCircle className="h-5 w-5" />
                       Fale via WhatsApp
-                    </a>
+                    </WhatsAppLink>
                   </Button>
                 </div>
               </div>
@@ -486,10 +489,10 @@ export default function BaixaEstaturaPage() {
                   className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 text-lg px-8 py-6"
                   asChild
                 >
-                  <Link href="/contato">
+                  <CTALink href="/contato" label="Baixa Estatura - CTA - Agende sua Consulta">
                     <Calendar className="h-5 w-5" />
                     Agende sua Consulta
-                  </Link>
+                  </CTALink>
                 </Button>
                 
                 <Button
@@ -498,10 +501,10 @@ export default function BaixaEstaturaPage() {
                   className="border-2 border-primary text-primary hover:bg-primary/10 gap-2 text-lg px-8 py-6"
                   asChild
                 >
-                  <a href="tel:+5531995626630">
+                  <PhoneLink href="tel:+5531995626630" label="Baixa Estatura - CTA">
                     <Phone className="h-5 w-5" />
                     Ligar Agora
-                  </a>
+                  </PhoneLink>
                 </Button>
 
                 <Button
@@ -510,10 +513,10 @@ export default function BaixaEstaturaPage() {
                   className="border-2 border-primary text-primary hover:bg-primary/10 gap-2 text-lg px-8 py-6"
                   asChild
                 >
-                  <a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer">
+                  <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Baixa Estatura - CTA">
                     <MessageCircle className="h-5 w-5" />
                     WhatsApp
-                  </a>
+                  </WhatsAppLink>
                 </Button>
               </div>
             </div>

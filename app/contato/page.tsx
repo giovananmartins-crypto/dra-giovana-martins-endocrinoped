@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, Phone, MessageCircle, MapPin, Mail } from "lucide-react";
 import Image from "next/image";
+import { WhatsAppLink } from "@/components/analytics/WhatsAppLink";
+import { PhoneLink } from "@/components/analytics/PhoneLink";
 
 export const metadata: Metadata = generateMetadata({
   title: "Contato | Dra. Giovana Martins | Endocrinologista Pediátrica BH",
@@ -89,10 +91,10 @@ export default function Contact() {
                   className="bg-foreground text-card hover:bg-foreground/90 gap-2 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
                   asChild
                 >
-                  <a href="tel:+5531995626630">
+                  <PhoneLink href="tel:+5531995626630" label="Contact Page Hero">
                     <Phone className="h-5 w-5" />
                     Ligar Agora
-                  </a>
+                  </PhoneLink>
                 </Button>
                 <Button 
                   size="lg" 
@@ -100,10 +102,10 @@ export default function Contact() {
                   className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-card text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
                   asChild
                 >
-                  <a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer">
+                  <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Contact Page Hero">
                     <MessageCircle className="h-5 w-5" />
                     WhatsApp
-                  </a>
+                  </WhatsAppLink>
                 </Button>
               </div>
             </div>
@@ -156,10 +158,10 @@ export default function Contact() {
                           className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                           asChild
                         >
-                          <a href="tel:+5531995626630">
+                          <PhoneLink href="tel:+5531995626630" label="Contact Page Card">
                             <Phone className="h-4 w-4 mr-2" />
                             Ligar Agora
-                          </a>
+                          </PhoneLink>
                         </Button>
                       </div>
                     </div>
@@ -189,7 +191,7 @@ export default function Contact() {
                           className="w-full bg-green-500 text-white hover:bg-green-600"
                           asChild
                         >
-                          <a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer">
+                          <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Contact Page Card">
                             <div className="relative w-4 h-4 mr-2">
                               <Image
                                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
@@ -199,7 +201,7 @@ export default function Contact() {
                               />
                             </div>
                             Abrir WhatsApp
-                          </a>
+                          </WhatsAppLink>
                         </Button>
                       </div>
                     </div>

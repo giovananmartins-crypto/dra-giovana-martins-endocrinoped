@@ -8,6 +8,7 @@ import { Calendar, Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-reac
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Image from "next/image";
+import { analytics } from "@/lib/analytics";
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -20,6 +21,7 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    analytics.formSubmit('Contact Form');
     toast({
       title: "Mensagem enviada!",
       description: "Entraremos em contato em breve para agendar sua consulta.",

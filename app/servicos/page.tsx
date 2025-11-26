@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import { CheckCircle2, Heart, Award, Users, Stethoscope, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { CTALink } from "@/components/analytics/CTALink";
 
 export const metadata: Metadata = generateMetadata({
   title: "Nossos Serviços | Endocrinologia Pediátrica BH | Dra. Giovana Martins",
@@ -116,7 +117,9 @@ export default function Services() {
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-6">
                   <Button size="lg" className="bg-foreground text-card hover:bg-foreground/90 gap-2 text-lg px-8 py-6" asChild>
-                    <Link href="/contato">Agendar Consulta</Link>
+                    <CTALink href="/contato" label="Services Page Hero - Agendar Consulta">
+                      Agendar Consulta
+                    </CTALink>
                   </Button>
                   <Button size="lg" variant="outline" className="border-2 border-foreground text-foreground hover:bg-foreground/10 text-lg px-8 py-6" asChild>
                     <Link href="/sobre">Conheça a Dra. Giovana</Link>

@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { WhatsAppLink } from "@/components/analytics/WhatsAppLink";
 
 interface FAQItem {
   question: string;
@@ -149,9 +150,9 @@ export const FAQSection = ({
                         </Link>
                       </Button>
                       <Button variant="outline" size="sm" asChild>
-                        <a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer">
+                        <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="FAQ Section">
                           WhatsApp
-                        </a>
+                        </WhatsAppLink>
                       </Button>
                     </div>
                   )}

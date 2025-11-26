@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { analytics } from "@/lib/analytics";
 
 const navItems = [
   { name: "Início", href: "/" },
@@ -78,7 +79,10 @@ export const Header = () => {
               className="hidden sm:flex bg-foreground text-card hover:bg-foreground/90 gap-2"
               asChild
             >
-              <Link href="/contato">
+              <Link 
+                href="/contato"
+                onClick={() => analytics.ctaClick('Header - Agendar Consulta')}
+              >
                 <Calendar className="h-4 w-4" />
                 Agendar Consulta
               </Link>
@@ -114,7 +118,13 @@ export const Header = () => {
               className="w-full bg-foreground text-card hover:bg-foreground/90 gap-2"
               asChild
             >
-              <Link href="/contato" onClick={() => setIsMenuOpen(false)}>
+              <Link 
+                href="/contato" 
+                onClick={() => {
+                  analytics.ctaClick('Header Mobile - Agendar Consulta');
+                  setIsMenuOpen(false);
+                }}
+              >
                 <Calendar className="h-4 w-4" />
                 Agendar Consulta
               </Link>

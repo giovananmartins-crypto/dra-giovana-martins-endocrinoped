@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Calendar, Phone, MessageCircle } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 
 export const CTASection = () => {
   const scrollToSection = (id: string) => {
@@ -29,7 +30,10 @@ export const CTASection = () => {
             <Button
               size="lg"
               className="bg-foreground text-card hover:bg-foreground/90 gap-2 text-lg px-8 py-6"
-              onClick={() => scrollToSection("contato")}
+              onClick={() => {
+                analytics.ctaClick('Agendar Consulta Online - CTA Section');
+                scrollToSection("contato");
+              }}
             >
               <Calendar className="h-5 w-5" />
               Agendar Consulta Online
@@ -41,7 +45,7 @@ export const CTASection = () => {
               className="border-2 border-foreground text-foreground hover:bg-foreground/10 text-lg px-8 py-6 gap-2"
               asChild
             >
-              <a href="tel:+5531995626630">
+              <a href="tel:+5531995626630" onClick={() => analytics.phoneCall('CTA Section')}>
                 <Phone className="h-5 w-5" />
                 Ligar Agora
               </a>
@@ -53,7 +57,7 @@ export const CTASection = () => {
               className="border-2 border-foreground text-foreground hover:bg-foreground/10 text-lg px-8 py-6 gap-2"
               asChild
             >
-              <a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" onClick={() => analytics.whatsappClick('CTA Section')}>
                 <MessageCircle className="h-5 w-5" />
                 WhatsApp
               </a>
