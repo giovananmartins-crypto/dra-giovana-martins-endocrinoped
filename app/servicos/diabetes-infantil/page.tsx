@@ -57,14 +57,22 @@ const faqs = [
 
 const testimonials = [
   {
-    author: "Mãe de paciente",
+    author: "Aline Marques",
+    relation: "Mãe de paciente",
     rating: 5,
-    reviewBody: "A Dra. Giovana Martins transformou nossa jornada com diabetes. Minha filha hoje leva uma vida normal e feliz graças ao cuidado, atenção e orientação que recebemos. O acompanhamento é sempre muito próximo e cuidadoso."
+    reviewBody: "Dra Giovana é uma ótima profissional, muito cuidadosa e tem propriedade nas coisas que fala."
   },
   {
-    author: "Pai de paciente",
+    author: "LH",
+    relation: "Mãe de paciente",
     rating: 5,
-    reviewBody: "Encontramos na Dra. Giovana uma médica excepcional que nos ensinou a conviver com o diabetes do nosso filho. Hoje ele pratica esportes, vai à escola normalmente e tem uma vida completamente normal. Estamos muito gratos!"
+    reviewBody: "A médica foi completamente atenciosa na consulta. Foi super didática."
+  },
+  {
+    author: "LVSR",
+    relation: "Mãe de paciente",
+    rating: 5,
+    reviewBody: "Ótimo atendimento, doutora muito atenciosa e cuidadosa."
   }
 ];
 
@@ -178,7 +186,7 @@ export default function DiabetesInfantilPage() {
                   O diabetes é uma condição crônica que afeta a forma como o corpo processa a glicose (açúcar) no sangue. Em crianças, o diabetes pode ser do Tipo 1 ou Tipo 2, cada um com características, causas e tratamentos específicos. O diagnóstico precoce e o tratamento adequado são fundamentais para prevenir complicações e garantir qualidade de vida.
                 </p>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  A Dra. Giovana Martins, endocrinologista pediátrica com mais de 15 anos de experiência em Belo Horizonte, oferece diagnóstico preciso, tratamento personalizado e acompanhamento contínuo para crianças com diabetes, sempre com foco na educação da família e no bem-estar da criança.
+                  A Dra. Giovana Martins, endocrinologista pediátrica com formação de excelência em Belo Horizonte, oferece diagnóstico preciso, tratamento personalizado e acompanhamento contínuo para crianças com diabetes, sempre com foco na educação da família e no bem-estar da criança.
                 </p>
               </div>
             </div>

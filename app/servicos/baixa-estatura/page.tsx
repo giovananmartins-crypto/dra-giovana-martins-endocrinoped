@@ -57,14 +57,22 @@ const faqs = [
 
 const testimonials = [
   {
-    author: "Mãe de paciente",
+    author: "Eliane",
+    relation: "Mãe de paciente",
     rating: 5,
-    reviewBody: "A Dra. Giovana Martins fez toda a diferença no tratamento da baixa estatura do nosso filho. Com o acompanhamento dela, conseguimos identificar a causa e iniciar o tratamento adequado. Hoje ele está crescendo muito melhor!"
+    reviewBody: "Doutora simpática, pontual e esclareceu todas as dúvidas."
   },
   {
-    author: "Pai de paciente",
+    author: "Emmanuela",
+    relation: "Mãe de paciente",
     rating: 5,
-    reviewBody: "Estávamos muito preocupados com o crescimento da nossa filha. A Dra. Giovana foi muito atenciosa, explicou tudo com clareza e desenvolveu um plano de tratamento personalizado. Estamos muito satisfeitos com os resultados."
+    reviewBody: "Excelente profissional, bem atenciosa e carismática."
+  },
+  {
+    author: "Janaína Cândida de Andrade",
+    relation: "Mãe de paciente",
+    rating: 5,
+    reviewBody: "Ótimo atendimento, excelente profissional, atendimento de qualidade."
   }
 ];
 
@@ -178,7 +186,7 @@ export default function BaixaEstaturaPage() {
                   A baixa estatura em crianças é uma preocupação comum entre os pais. Nem toda criança baixa tem um problema médico, mas quando há desaceleração do crescimento ou a estatura está significativamente abaixo do esperado, é importante buscar avaliação especializada para identificar a causa e determinar se há necessidade de tratamento.
                 </p>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  A Dra. Giovana Martins, endocrinologista pediátrica com mais de 15 anos de experiência em Belo Horizonte, realiza uma avaliação completa do crescimento, investiga as possíveis causas e desenvolve um plano de tratamento personalizado quando necessário, sempre com foco no bem-estar da criança.
+                  A Dra. Giovana Martins, endocrinologista pediátrica com formação de excelência em Belo Horizonte, realiza uma avaliação completa do crescimento, investiga as possíveis causas e desenvolve um plano de tratamento personalizado quando necessário, sempre com foco no bem-estar da criança.
                 </p>
               </div>
             </div>

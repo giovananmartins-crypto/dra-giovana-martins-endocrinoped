@@ -57,14 +57,22 @@ const faqs = [
 
 const testimonials = [
   {
-    author: "Mãe de paciente",
+    author: "Janainna Kirk",
+    relation: "Mãe de paciente",
     rating: 5,
-    reviewBody: "A Dra. Giovana Martins diagnosticou e tratou o hipotireoidismo da nossa filha com muita competência e cuidado. O acompanhamento é sempre muito próximo e hoje nossa filha está se desenvolvendo perfeitamente. Recomendo muito!"
+    reviewBody: "Consultório com boa estrutura e atendimento. A médica é qualificada e atenciosa."
   },
   {
-    author: "Pai de paciente",
+    author: "Amazildo",
+    relation: "Pai de paciente",
     rating: 5,
-    reviewBody: "Encontramos na Dra. Giovana uma médica excepcional para tratar o hipertireoidismo do nosso filho. O tratamento foi eficaz e o acompanhamento sempre muito cuidadoso. Estamos muito satisfeitos com os resultados."
+    reviewBody: "Excelente profissional. Indicaria para qualquer pessoa."
+  },
+  {
+    author: "Kele",
+    relation: "Mãe de paciente",
+    rating: 5,
+    reviewBody: "Gostei, achei ela atenciosa. Recomendo. Vamos fazer os exames ainda pra ver o melhor tratamento."
   }
 ];
 
@@ -174,7 +182,7 @@ export default function DisturbiosTireoidePage() {
                   A tireoide é uma glândula em formato de borboleta localizada na parte frontal do pescoço, responsável por produzir hormônios essenciais para o crescimento, desenvolvimento do cérebro, metabolismo e funcionamento adequado de diversos órgãos. Na infância, a função adequada da tireoide é crucial para o desenvolvimento físico e mental da criança.
                 </p>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  Distúrbios da tireoide em crianças podem incluir hipotireoidismo (produção insuficiente de hormônios), hipertireoidismo (produção excessiva) e nódulos. A Dra. Giovana Martins, endocrinologista pediátrica com mais de 15 anos de experiência em Belo Horizonte, oferece diagnóstico preciso e tratamento especializado para essas condições.
+                  Distúrbios da tireoide em crianças podem incluir hipotireoidismo (produção insuficiente de hormônios), hipertireoidismo (produção excessiva) e nódulos. A Dra. Giovana Martins, endocrinologista pediátrica com formação de excelência em Belo Horizonte, oferece diagnóstico preciso e tratamento especializado para essas condições.
                 </p>
               </div>
             </div>

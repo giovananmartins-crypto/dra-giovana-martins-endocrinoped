@@ -32,7 +32,7 @@ export const metadata: Metadata = generateMetadata({
 const servicesFAQs = [
   {
     question: "Quais serviços a Dra. Giovana Martins oferece?",
-    answer: "A Dra. Giovana Martins oferece atendimento especializado em puberdade precoce, diabetes infantil (tipo 1 e 2), baixa estatura e distúrbios do crescimento, distúrbios da tireoide, obesidade pediátrica e outros distúrbios endócrinos em crianças e adolescentes."
+    answer: "A Dra. Giovana Martins oferece atendimento especializado em puberdade precoce, diabetes infantil (tipo 1 e 2), baixa estatura e distúrbios do crescimento, distúrbios da tireoide, obesidade infantil e outros distúrbios endócrinos em crianças e adolescentes."
   },
   {
     question: "Como agendar uma consulta para um serviço específico?",
@@ -64,8 +64,8 @@ const benefits = [
   },
   {
     icon: Award,
-    title: "Experiência Comprovada",
-    description: "Mais de 15 anos de experiência em endocrinologia pediátrica, com centenas de famílias atendidas com sucesso."
+    title: "Formação de Excelência",
+    description: "Formação de excelência em endocrinologia pediátrica, com centenas de famílias atendidas com sucesso."
   },
   {
     icon: Stethoscope,
@@ -112,7 +112,7 @@ export default function Services() {
                 </h1>
                 
                 <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
-                  Oferecemos tratamento especializado e acompanhamento personalizado para as principais condições endócrinas na infância e adolescência. Com mais de 15 anos de experiência, a Dra. Giovana Martins dedica-se ao cuidado integral de cada criança.
+                  Oferecemos tratamento especializado e acompanhamento personalizado para as principais condições endócrinas na infância e adolescência. Com uma formação de excelência, a Dra. Giovana Martins dedica-se ao cuidado integral de cada criança.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-6">

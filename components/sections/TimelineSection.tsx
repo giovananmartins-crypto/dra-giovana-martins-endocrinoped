@@ -2,27 +2,27 @@ import { GraduationCap, Award, Briefcase, Heart } from "lucide-react";
 
 const timelineEvents = [
   {
-    year: "2010",
+    year: "Graduação",
     title: "Formação em Medicina",
-    description: "Graduação em Medicina pela Universidade Federal de Minas Gerais",
+    description: "Graduação em Medicina pela UNIFENAS - Alfenas",
     icon: GraduationCap
   },
   {
-    year: "2013",
+    year: "Residência",
     title: "Residência em Pediatria",
-    description: "Especialização em Pediatria pelo Hospital das Clínicas UFMG",
+    description: "Residência em Pediatria pelo Hospital Infantil João Paulo II",
     icon: Award
   },
   {
-    year: "2015",
-    title: "Especialização em Endocrinologia Pediátrica",
-    description: "Fellowship em Endocrinologia Pediátrica pela Sociedade Brasileira de Endocrinologia",
+    year: "Especialização",
+    title: "Residência em Endocrinologia Pediátrica",
+    description: "Residência em Endocrinologia Pediátrica pelo Hospital das Clínicas da UFMG",
     icon: Award
   },
   {
-    year: "2016-Presente",
+    year: "Presente",
     title: "Atendimento Especializado",
-    description: "Dedicação exclusiva à endocrinologia pediátrica em Belo Horizonte",
+    description: "Dedicação exclusiva à endocrinologia pediátrica em Belo Horizonte, região metropolitana e Guanambi-BA",
     icon: Briefcase
   },
   {

@@ -5,21 +5,21 @@ import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
-    name: "Maria Silva",
+    name: "Natália Nascimento",
     relation: "Mãe de paciente",
-    text: "A Dra. Giovana Martins transformou nossa jornada com diabetes. Minha filha hoje leva uma vida normal e feliz graças ao cuidado e atenção que recebemos.",
+    text: "A doutora é maravilhosa, atenciosa, carinhosa com as crianças. Explica tudo de forma que nós, que não entendemos do assunto, possamos entender tudo o que está acontecendo. Super educada. Simplesmente amei a consulta. Excelente profissional.",
     rating: 5
   },
   {
-    name: "João Santos",
-    relation: "Pai de paciente",
-    text: "Encontramos na Dra. Giovana Martins não apenas uma médica excepcional, mas alguém que realmente se importa. O acompanhamento do crescimento do nosso filho foi impecável.",
+    name: "Anna Clara Lopes",
+    relation: "Mãe de paciente",
+    text: "Excelente profissional! Sempre atenta ao que tem de melhor evidência, tratando com muita dedicação e carinho. Tenho plena confiança no seu trabalho!",
     rating: 5
   },
   {
-    name: "Ana Paula",
+    name: "Halia Silva",
     relation: "Mãe de paciente",
-    text: "O acolhimento e a clareza nas explicações fazem toda diferença. Sempre saímos das consultas tranquilos e bem informados sobre o tratamento.",
+    text: "Amei o cuidado dela com meu filho. Super profissional e atenciosa.",
     rating: 5
   }
 ];
@@ -34,6 +34,9 @@ export const TestimonialsSection = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A confiança das famílias é o nosso maior reconhecimento
+          </p>
+          <p className="text-sm text-muted-foreground mt-4 italic">
+            * Depoimentos também disponíveis no Doctoralia
           </p>
         </div>
 

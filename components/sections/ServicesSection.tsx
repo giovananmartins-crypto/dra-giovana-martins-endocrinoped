@@ -17,7 +17,7 @@ const services = [
   },
   {
     icon: Scale,
-    title: "Obesidade Pediátrica",
+    title: "Obesidade Infantil",
     description: "Abordagem multidisciplinar para controle de peso e hábitos saudáveis",
     href: "/servicos/obesidade-pediatrica"
   },

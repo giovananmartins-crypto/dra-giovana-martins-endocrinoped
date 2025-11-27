@@ -13,7 +13,7 @@ export const AboutDetailsSection = () => {
   const images = [
     {
       src: "/images/dra-giovana/02-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg",
-      alt: "Dra. Giovana Martins - Endocrinologista Pediátrica com mais de 15 anos de experiência em Belo Horizonte"
+      alt: "Dra. Giovana Martins - Endocrinologista Pediátrica com formação de excelência em Belo Horizonte"
     },
     {
       src: "/images/dra-giovana/03-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg",
@@ -91,8 +91,7 @@ export const AboutDetailsSection = () => {
                     Graduação em Medicina
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Formada em Medicina pela Universidade Federal de Minas Gerais (UFMG), 
-                    uma das mais renomadas instituições de ensino médico do Brasil. Durante 
+                    Graduação em Medicina pela UNIFENAS - Alfenas. Durante 
                     a graduação, desenvolveu interesse especial pela pediatria e endocrinologia.
                   </p>
                   <div className="mt-4">
@@ -109,7 +108,7 @@ export const AboutDetailsSection = () => {
                     Residência em Pediatria
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Especialização em Pediatria pelo Hospital das Clínicas da UFMG, onde 
+                    Residência em Pediatria pelo Hospital Infantil João Paulo II, onde 
                     adquiriu experiência sólida no cuidado de crianças e adolescentes, 
                     desenvolvendo habilidades essenciais para o atendimento pediátrico.
                   </p>
@@ -124,12 +123,11 @@ export const AboutDetailsSection = () => {
               <Card className="border-none shadow-soft bg-card">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-foreground mb-3">
-                    Especialização em Endocrinologia Pediátrica
+                    Residência em Endocrinologia Pediátrica
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Fellowship em Endocrinologia Pediátrica pela Sociedade Brasileira de 
-                    Endocrinologia e Metabologia (SBEM), com foco em distúrbios do crescimento, 
-                    puberdade, diabetes infantil e distúrbios da tireoide.
+                    Residência em Endocrinologia Pediátrica pelo Hospital das Clínicas da UFMG, 
+                    com foco em distúrbios do crescimento, puberdade, diabetes infantil e distúrbios da tireoide.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
                     <Link href="/servicos/baixa-estatura" className="text-sm text-primary hover:underline font-medium inline-flex items-center gap-1">
@@ -154,13 +152,13 @@ export const AboutDetailsSection = () => {
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
               <Award className="h-8 w-8 text-secondary" />
-              Certificações e Membro de Sociedades Médicas
+              Certificações
             </h2>
             <div className="grid md:grid-cols-2 gap-4">
               <Card className="border-none shadow-soft bg-card">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-foreground mb-2">
-                    CRM/MG [NÚMERO]
+                    CRM-MG 79896
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     Conselho Regional de Medicina de Minas Gerais
@@ -171,7 +169,7 @@ export const AboutDetailsSection = () => {
               <Card className="border-none shadow-soft bg-card">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-foreground mb-2">
-                    RQE [NÚMERO]
+                    RQE 66519
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     Registro de Qualificação de Especialista
@@ -182,21 +180,10 @@ export const AboutDetailsSection = () => {
               <Card className="border-none shadow-soft bg-card">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-foreground mb-2">
-                    Membro da SBEM
+                    CRM-BA 49737
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    Sociedade Brasileira de Endocrinologia e Metabologia
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="border-none shadow-soft bg-card">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    Membro da SBP
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Sociedade Brasileira de Pediatria
+                    Conselho Regional de Medicina da Bahia
                   </p>
                 </CardContent>
               </Card>
@@ -212,9 +199,9 @@ export const AboutDetailsSection = () => {
             <Card className="border-none shadow-soft bg-card">
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Com mais de 15 anos de experiência em endocrinologia pediátrica, a Dra. Giovana 
+                  Com uma formação de excelência em endocrinologia pediátrica, a Dra. Giovana 
                   Martins dedica-se exclusivamente ao atendimento de crianças e adolescentes em 
-                  Belo Horizonte e região metropolitana.
+                  Belo Horizonte, região metropolitana e Guanambi-BA (cidade natal).
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Sua prática clínica abrange o diagnóstico e tratamento de diversas condições 
@@ -222,7 +209,7 @@ export const AboutDetailsSection = () => {
                   <Link href="/servicos/puberdade-precoce" className="text-primary hover:underline font-medium"> puberdade precoce e atrasada</Link>, 
                   <Link href="/servicos/diabetes-infantil" className="text-primary hover:underline font-medium"> diabetes tipo 1 e 2</Link>, 
                   <Link href="/servicos/disturbios-tireoide" className="text-primary hover:underline font-medium"> distúrbios da tireoide</Link>, 
-                  obesidade pediátrica e outras condições relacionadas ao sistema endócrino.
+                  obesidade infantil e outras condições relacionadas ao sistema endócrino.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Ao longo de sua carreira, já atendeu mais de 500 famílias, sempre priorizando 
@@ -324,54 +311,30 @@ export const AboutDetailsSection = () => {
             <Card className="border-none shadow-soft bg-card">
               <CardContent className="p-6 space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  A Dra. Giovana Martins mantém-se constantemente atualizada através da participação 
-                  em congressos, simpósios e cursos de atualização em endocrinologia pediátrica. 
-                  Sua dedicação à educação médica contínua garante que os pacientes recebam os 
-                  tratamentos mais atualizados e baseados nas melhores evidências científicas.
+                  Participação regular em congressos e outros eventos científicos, mantendo-se atualizada com as mais recentes pesquisas e diretrizes em endocrinologia pediátrica.
                 </p>
                 
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="flex items-start gap-3 p-4 bg-gradient-soft rounded-lg">
-                    <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="h-6 w-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">Atualização Contínua</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Participação regular em congressos da SBEM (Sociedade Brasileira de Endocrinologia e Metabologia) 
-                        e SBP (Sociedade Brasileira de Pediatria), mantendo-se atualizada com as mais recentes 
-                        pesquisas e diretrizes em endocrinologia pediátrica.
-                      </p>
-                    </div>
+                <div className="space-y-4 mt-6">
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-3">Participação em Congressos</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li>• Participação no 15º Congresso Brasileiro Pediátrico de Endocrinologia e Metabologia (COBRAPEM) realizado em Belo Horizonte - MG em 2023</li>
+                      <li>• Participação no 9º Encontro Brasileiro de Endocrinologia Pediátrica (EBEP) realizado em Brasília - DF em 2024</li>
+                      <li>• Participação no 16º Congresso Brasileiro Pediátrico de Endocrinologia e Metabologia (COBRAPEM) realizado em Recife - PE em 2025</li>
+                    </ul>
                   </div>
 
-                  <div className="flex items-start gap-3 p-4 bg-gradient-soft rounded-lg">
-                    <div className="w-12 h-12 rounded-xl bg-info/20 flex items-center justify-center flex-shrink-0">
-                      <Calendar className="h-6 w-6 text-info-foreground" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-2">Eventos e Congressos</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Participação ativa em eventos científicos nacionais e internacionais, 
-                        cursos de atualização e simpósios especializados em endocrinologia pediátrica, 
-                        garantindo excelência no atendimento.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-border">
-                  <p className="text-sm text-muted-foreground italic mb-4">
-                    <strong>Nota:</strong> Esta seção será atualizada com publicações científicas e 
-                    participações específicas em eventos conforme informações fornecidas pela Dra. Giovana Martins.
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    <Link href="/blog" className="text-sm text-primary hover:underline font-medium inline-flex items-center gap-1">
-                      Leia artigos científicos no blog →
-                    </Link>
-                    <Link href="/servicos" className="text-sm text-primary hover:underline font-medium inline-flex items-center gap-1">
-                      Conheça nossos tratamentos →
-                    </Link>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-3">Trabalhos Científicos Apresentados</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li>• <strong>Autora:</strong> DEFICIÊNCIA ENZIMÁTICA RARA DIAGNOSTICADA NO CONTEXTO DA TRIAGEM NEONATAL PARA A DEFICIÊNCIA DA 21-HIDROXILASE NO ESTADO DE MINAS GERAIS: RELATO DE CASO - apresentado sobre forma de pôster eletrônico no 15º Congresso Brasileiro Pediátrico de Endocrinologia e Metabologia realizado em Belo Horizonte - MG em 2023</li>
+                      <li>• <strong>Autora:</strong> CASO RARO DE PSEUDO-HIPOALDOSTERONISMO TIPO 1 - apresentado sobre forma de pôster eletrônico no 15º Congresso Brasileiro Pediátrico de Endocrinologia e Metabologia realizado em Belo Horizonte - MG em 2023</li>
+                      <li>• <strong>Coautora:</strong> RELATO DE CASO: DIAGNÓSTICO NA INFÂNCIA DA SÍNDROME 45,X, COM FENÓTIPO MASCULINO - apresentado sobre forma de pôster eletrônico no 15º Congresso Brasileiro Pediátrico de Endocrinologia e Metabologia realizado em Belo Horizonte - MG em 2023</li>
+                      <li>• <strong>Coautora:</strong> BAIXA ESTATURA POR PICNODISOSTOSE - RELATO DE CASO - apresentado sobre forma de pôster eletrônico no 15º Congresso Brasileiro Pediátrico de Endocrinologia e Metabologia realizado em Belo Horizonte - MG em 2023</li>
+                      <li>• <strong>Coautora:</strong> OS DESAFIOS NA CONDUÇÃO CLÍNICA DO HIPERINSULINISMO CONGÊNITO - RELATO DE CASO - apresentado sobre forma de pôster eletrônico no 15º Congresso Brasileiro Pediátrico de Endocrinologia e Metabologia realizado em Belo Horizonte - MG em 2023</li>
+                      <li>• <strong>Coautora:</strong> IMPACTO DE AÇÕES EDUCATIVAS NO TRATAMENTO DE CRIANÇAS E ADOLESCENTES COM DIABETES TIPO 1 - apresentado sobre forma de pôster eletrônico no 15º Congresso Brasileiro Pediátrico de Endocrinologia e Metabologia realizado em Belo Horizonte - MG em 2023</li>
+                      <li>• <strong>Coautora:</strong> HIPOPLASIA ADRENAL CONGÊNITA LIGADA AO X (X-LINKED AHC): RELATO DE CASO E DIAGNÓSTICO DIFERENCIAL COM HIPERPLASIA ADRENAL CONGÊNITA (HAC) - apresentado sobre forma de pôster eletrônico no 15º Congresso Brasileiro Pediátrico de Endocrinologia e Metabologia realizado em Belo Horizonte - MG em 2023</li>
+                    </ul>
                   </div>
                 </div>
               </CardContent>

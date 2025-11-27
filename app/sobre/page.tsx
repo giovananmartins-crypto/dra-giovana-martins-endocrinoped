@@ -31,15 +31,15 @@ export const metadata: Metadata = generateMetadata({
 const aboutFAQs = [
   {
     question: "Qual a formação da Dra. Giovana Martins?",
-    answer: "A Dra. Giovana Martins é formada em Medicina pela Universidade Federal de Minas Gerais (UFMG), com residência em Pediatria pelo Hospital das Clínicas da UFMG e especialização em Endocrinologia Pediátrica pela Sociedade Brasileira de Endocrinologia e Metabologia (SBEM)."
+    answer: "A Dra. Giovana Martins é graduada em Medicina pela UNIFENAS - Alfenas, com residência em Pediatria pelo Hospital Infantil João Paulo II e residência em Endocrinologia Pediátrica pelo Hospital das Clínicas da UFMG."
   },
   {
     question: "Há quanto tempo a Dra. Giovana Martins atua em endocrinologia pediátrica?",
-    answer: "A Dra. Giovana Martins possui mais de 15 anos de experiência em endocrinologia pediátrica, dedicando-se exclusivamente ao atendimento de crianças e adolescentes em Belo Horizonte e região metropolitana."
+    answer: "A Dra. Giovana Martins possui uma formação de excelência em endocrinologia pediátrica, dedicando-se exclusivamente ao atendimento de crianças e adolescentes em Belo Horizonte, região metropolitana e Guanambi-BA (cidade natal)."
   },
   {
     question: "Quais são as certificações da Dra. Giovana Martins?",
-    answer: "A Dra. Giovana Martins possui CRM/MG e RQE (Registro de Qualificação de Especialista), sendo membro da Sociedade Brasileira de Endocrinologia e Metabologia (SBEM) e da Sociedade Brasileira de Pediatria (SBP)."
+    answer: "A Dra. Giovana Martins possui CRM-MG 79896, RQE 66519 e CRM-BA 49737."
   },
   {
     question: "Qual a filosofia de atendimento da Dra. Giovana Martins?",
@@ -51,37 +51,67 @@ const aboutFAQs = [
   },
   {
     question: "A Dra. Giovana Martins atende apenas em Belo Horizonte?",
-    answer: "Sim, a Dra. Giovana Martins atende exclusivamente em Belo Horizonte, MG, no consultório localizado na R. Turquesa, 347 - Prado, Belo Horizonte - MG, 30411-177."
+    answer: "A Dra. Giovana Martins atende em Belo Horizonte e região metropolitana, no consultório localizado na R. Turquesa, 347 - Prado, Belo Horizonte - MG, 30411-177, e também em Guanambi-BA (cidade natal)."
   }
 ];
 
 const testimonials = [
   {
-    author: "Maria Silva",
+    author: "Natália Nascimento",
     relation: "Mãe de paciente",
     rating: 5,
-    reviewBody: "A Dra. Giovana Martins transformou nossa jornada com diabetes. Minha filha hoje leva uma vida normal e feliz graças ao cuidado e atenção que recebemos. Recomendo muito!"
+    reviewBody: "A doutora é maravilhosa, atenciosa, carinhosa com as crianças. Explica tudo de forma que nós, que não entendemos do assunto, possamos entender tudo o que está acontecendo. Super educada. Simplesmente amei a consulta. Excelente profissional."
   },
   {
-    author: "João Santos",
-    relation: "Pai de paciente",
-    rating: 5,
-    reviewBody: "Encontramos na Dra. Giovana Martins não apenas uma médica excepcional, mas alguém que realmente se importa. O acompanhamento do crescimento do nosso filho foi impecável."
-  },
-  {
-    author: "Ana Paula",
+    author: "Anna Clara Lopes",
     relation: "Mãe de paciente",
     rating: 5,
-    reviewBody: "O acolhimento e a clareza nas explicações fazem toda diferença. Sempre saímos das consultas tranquilos e bem informados sobre o tratamento. A Dra. Giovana é excepcional!"
+    reviewBody: "Excelente profissional! Sempre atenta ao que tem de melhor evidência, tratando com muita dedicação e carinho. Tenho plena confiança no seu trabalho!"
+  },
+  {
+    author: "Jaqueline Lima",
+    relation: "Mãe de paciente",
+    rating: 5,
+    reviewBody: "Médica atenciosa, explicou tudo com muita calma, teve atenção em ouvir o relato da paciente. Muito satisfeita."
+  },
+  {
+    author: "Marisete Lopes",
+    relation: "Mãe de paciente",
+    rating: 5,
+    reviewBody: "Muito atenciosa, carinhosa pra lidar com criança, passou muita tranquilidade a mim mãe que fica ansiosa antes dos resultados. Ótima doutora, adoramos a consulta."
+  },
+  {
+    author: "Thaís Fátima de Oliveira",
+    relation: "Mãe de paciente",
+    rating: 5,
+    reviewBody: "Amei, maravilhosa, super atenciosa, analisa tudo. Gostei muito."
+  },
+  {
+    author: "Ana Clara",
+    relation: "Mãe de paciente",
+    rating: 5,
+    reviewBody: "Excelente profissional, atenciosa, escuta todos os relatos dos pacientes, e simpática."
+  },
+  {
+    author: "Halia Silva",
+    relation: "Mãe de paciente",
+    rating: 5,
+    reviewBody: "Amei o cuidado dela com meu filho. Super profissional e atenciosa."
+  },
+  {
+    author: "Marcela M.",
+    relation: "Mãe de paciente",
+    rating: 5,
+    reviewBody: "A Dra. Giovana foi muito atenciosa durante a consulta, fez o exame clínico completo e explicou os próximos passos."
   }
 ];
 
 const stats = [
   {
     icon: Award,
-    number: "15+",
-    label: "Anos de Experiência",
-    description: "Dedicação exclusiva à endocrinologia pediátrica"
+    number: "Excelência",
+    label: "Formação",
+    description: "Formação de excelência em endocrinologia pediátrica"
   },
   {
     icon: Users,

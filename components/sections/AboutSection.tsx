@@ -12,7 +12,7 @@ export const AboutSection = () => {
   const images = [
     {
       src: "/images/dra-giovana/02-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg",
-      alt: "Dra. Giovana Martins - Endocrinologista Pediátrica com mais de 15 anos de experiência em Belo Horizonte"
+      alt: "Dra. Giovana Martins - Endocrinologista Pediátrica com formação de excelência em Belo Horizonte"
     },
     {
       src: "/images/dra-giovana/03-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg",
@@ -65,9 +65,9 @@ export const AboutSection = () => {
             </h2>
             
             <p className="text-lg text-foreground/80 leading-relaxed max-w-2xl mx-auto">
-              Com mais de 15 anos de experiência em endocrinologia pediátrica, a Dra. Giovana Martins 
-              é uma especialista dedicada ao cuidado integral de crianças e adolescentes em Belo Horizonte. 
-              Sua formação sólida e compromisso com a excelência médica garantem o melhor atendimento 
+              Com uma formação de excelência em endocrinologia pediátrica, a Dra. Giovana Martins 
+              é uma especialista dedicada ao cuidado integral de crianças e adolescentes em Belo Horizonte, 
+              região metropolitana e Guanambi-BA. Sua formação sólida e compromisso com a excelência médica garantem o melhor atendimento 
               para seu filho.
             </p>
 
@@ -91,7 +91,7 @@ export const AboutSection = () => {
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Certificações</h3>
                   <p className="text-sm text-muted-foreground">
-                    Membro da SBEM e SBP, com atualização constante em novas práticas médicas
+                    CRM-MG 79896 | RQE 66519 | CRM-BA 49737
                   </p>
                 </div>
               </div>
@@ -101,9 +101,9 @@ export const AboutSection = () => {
                   <Users className="h-6 w-6 text-info" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Experiência</h3>
+                  <h3 className="font-semibold text-foreground mb-1">Atendimento</h3>
                   <p className="text-sm text-muted-foreground">
-                    Mais de 15 anos atendendo famílias em Belo Horizonte e região metropolitana
+                    Belo Horizonte, região metropolitana e Guanambi-BA (cidade natal)
                   </p>
                 </div>
               </div>

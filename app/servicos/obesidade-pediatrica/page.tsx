@@ -13,14 +13,14 @@ import { PhoneLink } from "@/components/analytics/PhoneLink";
 import { CTALink } from "@/components/analytics/CTALink";
 
 export const metadata: Metadata = generateMetadata({
-  title: "Obesidade Pediátrica | Tratamento Multidisciplinar em BH | Dra. Giovana Martins",
+  title: "Obesidade Infantil | Tratamento Multidisciplinar em BH | Dra. Giovana Martins",
   description: "Abordagem especializada para obesidade infantil: diagnóstico, tratamento multidisciplinar e prevenção. Conte com a Dra. Giovana Martins em Belo Horizonte.",
   keywords: [
-    "obesidade pediátrica",
+    "obesidade infantil",
     "obesidade infantil",
     "sobrepeso crianças",
     "tratamento obesidade infantil",
-    "endocrinologista obesidade pediátrica",
+    "endocrinologista obesidade infantil",
     "IMC infantil",
     "prevenção obesidade crianças",
     "hábitos saudáveis crianças"
@@ -43,11 +43,11 @@ const faqs = [
     answer: "A obesidade infantil pode levar a complicações imediatas e a longo prazo, incluindo: diabetes tipo 2, hipertensão arterial, dislipidemia (colesterol alto), problemas ortopédicos, apneia do sono, baixa autoestima e problemas psicológicos, e maior risco de obesidade na vida adulta. O tratamento precoce é fundamental para prevenir essas complicações."
   },
   {
-    question: "Como é feito o diagnóstico de obesidade pediátrica?",
+    question: "Como é feito o diagnóstico de obesidade infantil?",
     answer: "O diagnóstico é feito através da avaliação do IMC (peso/altura²) e comparação com curvas de crescimento específicas para idade e sexo. O médico também avalia a composição corporal, histórico familiar, hábitos alimentares, nível de atividade física e pode solicitar exames complementares para identificar possíveis causas secundárias ou complicações associadas."
   },
   {
-    question: "Qual é o tratamento para obesidade pediátrica?",
+    question: "Qual é o tratamento para obesidade infantil?",
     answer: "O tratamento é multidisciplinar e inclui: mudanças na alimentação (orientação nutricional individualizada), aumento da atividade física, mudanças comportamentais e de estilo de vida, acompanhamento psicológico quando necessário, e em casos específicos, pode incluir medicamentos (sempre com prescrição médica). O tratamento deve ser gradual, sustentável e envolver toda a família."
   },
   {
@@ -58,14 +58,22 @@ const faqs = [
 
 const testimonials = [
   {
-    author: "Mãe de paciente",
+    author: "Kátia",
+    relation: "Mãe de paciente",
     rating: 5,
-    reviewBody: "A Dra. Giovana Martins nos ajudou a transformar os hábitos da nossa família. Com orientação especializada e acompanhamento contínuo, conseguimos melhorar a saúde do nosso filho de forma gradual e sustentável. O tratamento multidisciplinar fez toda a diferença!"
+    reviewBody: "Médica atenciosa, cuidadosa e explicou bem todos os detalhes. Gostei muito da primeira consulta."
   },
   {
-    author: "Pai de paciente",
+    author: "Elica",
+    relation: "Mãe de paciente",
     rating: 5,
-    reviewBody: "Encontramos na Dra. Giovana não apenas uma médica, mas uma parceira na jornada de saúde da nossa filha. A abordagem respeitosa, educativa e sem julgamentos nos deu as ferramentas necessárias para promover mudanças positivas em toda a família."
+    reviewBody: "Excelente atendimento! Ficamos muito satisfeitos com a consulta."
+  },
+  {
+    author: "Kettine",
+    relation: "Mãe de paciente",
+    rating: 5,
+    reviewBody: "Doutora é muito atenciosa e explica tudo detalhadamente."
   }
 ];
 
@@ -73,8 +81,8 @@ export default function ObesidadePediatricaPage() {
   return (
     <div className="min-h-screen">
       <MedicalConditionSchema
-        name="Obesidade Pediátrica"
-        description="Obesidade pediátrica é uma condição caracterizada por excesso de gordura corporal em crianças e adolescentes, definida quando o IMC está acima do percentil 95 para idade e sexo, requerendo abordagem multidisciplinar para tratamento e prevenção de complicações."
+        name="Obesidade Infantil"
+        description="Obesidade infantil é uma condição caracterizada por excesso de gordura corporal em crianças e adolescentes, definida quando o IMC está acima do percentil 95 para idade e sexo, requerendo abordagem multidisciplinar para tratamento e prevenção de complicações."
         symptoms={[
           "IMC acima do percentil 95 para idade e sexo",
           "Acúmulo excessivo de gordura corporal",
@@ -103,7 +111,7 @@ export default function ObesidadePediatricaPage() {
         />
       ))}
       <WebPageSchema
-        name="Obesidade Pediátrica | Dra. Giovana Martins"
+        name="Obesidade Infantil | Dra. Giovana Martins"
         description="Abordagem especializada para obesidade infantil: diagnóstico, tratamento multidisciplinar e prevenção. Conte com a Dra. Giovana Martins em Belo Horizonte."
         url="/servicos/obesidade-pediatrica"
         image="https://www.giovanaendocrinoped.com.br/images/servicos/obesidade-pediatrica-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg"
@@ -121,7 +129,7 @@ export default function ObesidadePediatricaPage() {
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                  Obesidade Pediátrica: Abordagem Multidisciplinar e Especializada
+                  Obesidade Infantil: Abordagem Multidisciplinar e Especializada
                 </h1>
                 
                 <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
@@ -134,7 +142,7 @@ export default function ObesidadePediatricaPage() {
                     className="bg-foreground text-card hover:bg-foreground/90 gap-2 text-lg px-8 py-6"
                     asChild
                   >
-                    <CTALink href="/contato" label="Obesidade Pediátrica - Hero - Avalie o Peso">
+                    <CTALink href="/contato" label="Obesidade Infantil - Hero - Avalie o Peso">
                       <Calendar className="h-5 w-5" />
                       Avalie o Peso do seu Filho
                     </CTALink>
@@ -146,7 +154,7 @@ export default function ObesidadePediatricaPage() {
                     className="border-2 border-foreground text-foreground hover:bg-foreground/10 text-lg px-8 py-6 gap-2"
                     asChild
                   >
-                    <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Obesidade Pediátrica - Hero">
+                    <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Obesidade Infantil - Hero">
                       <MessageCircle className="h-5 w-5" />
                       Fale via WhatsApp
                     </WhatsAppLink>
@@ -158,7 +166,7 @@ export default function ObesidadePediatricaPage() {
                 <div className="aspect-[4/3] rounded-3xl shadow-medium overflow-hidden relative">
                   <Image
                     src="/images/servicos/obesidade-pediatrica-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg"
-                    alt="Obesidade Pediátrica - Tratamento Multidisciplinar com Dra. Giovana Martins, Endocrinologista Pediátrica em Belo Horizonte"
+                    alt="Obesidade Infantil - Tratamento Multidisciplinar com Dra. Giovana Martins, Endocrinologista Pediátrica em Belo Horizonte"
                     fill
                     className="object-cover rounded-3xl"
                     priority
@@ -177,27 +185,27 @@ export default function ObesidadePediatricaPage() {
             <div className="max-w-4xl mx-auto">
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-foreground/80 leading-relaxed mb-6">
-                  A obesidade pediátrica é uma condição de saúde pública crescente, caracterizada pelo excesso de gordura corporal em crianças e adolescentes. Segundo dados da Organização Mundial da Saúde (OMS) e da Sociedade Brasileira de Pediatria (SBP), a prevalência de obesidade infantil tem aumentado significativamente nas últimas décadas, tornando-se um importante desafio de saúde pública.
+                  A obesidade infantil é uma condição de saúde pública crescente, caracterizada pelo excesso de gordura corporal em crianças e adolescentes. Segundo dados da Organização Mundial da Saúde (OMS) e da Sociedade Brasileira de Pediatria (SBP), a prevalência de obesidade infantil tem aumentado significativamente nas últimas décadas, tornando-se um importante desafio de saúde pública.
                 </p>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  A Dra. Giovana Martins, endocrinologista pediátrica com mais de 15 anos de experiência em Belo Horizonte, oferece uma abordagem multidisciplinar e especializada para o tratamento da obesidade infantil, sempre com foco em mudanças sustentáveis, respeito à individualidade da criança e envolvimento de toda a família no processo de cuidado.
+                  A Dra. Giovana Martins, endocrinologista pediátrica com formação de excelência em Belo Horizonte, oferece uma abordagem multidisciplinar e especializada para o tratamento da obesidade infantil, sempre com foco em mudanças sustentáveis, respeito à individualidade da criança e envolvimento de toda a família no processo de cuidado.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* O que é Obesidade Pediátrica */}
+        {/* O que é Obesidade Infantil */}
         <section className="py-20 bg-gradient-soft">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-                O que é Obesidade Pediátrica?
+                O que é Obesidade Infantil?
               </h2>
               
               <div className="space-y-6 text-foreground/80 leading-relaxed">
                 <p>
-                  A obesidade pediátrica é definida quando o Índice de Massa Corporal (IMC) de uma criança ou adolescente está acima do percentil 95 para sua idade e sexo, conforme as curvas de crescimento estabelecidas pela Organização Mundial da Saúde (OMS) e recomendadas pela Sociedade Brasileira de Pediatria (SBP).
+                  A obesidade infantil é definida quando o Índice de Massa Corporal (IMC) de uma criança ou adolescente está acima do percentil 95 para sua idade e sexo, conforme as curvas de crescimento estabelecidas pela Organização Mundial da Saúde (OMS) e recomendadas pela Sociedade Brasileira de Pediatria (SBP).
                 </p>
 
                 <Card className="border-none shadow-soft bg-card">
@@ -246,7 +254,7 @@ export default function ObesidadePediatricaPage() {
               
               <div className="space-y-6 text-foreground/80 leading-relaxed">
                 <p>
-                  A obesidade pediátrica é uma condição multifatorial, resultante da interação entre fatores genéticos, ambientais, comportamentais e socioeconômicos. Compreender essas causas é fundamental para um tratamento eficaz.
+                  A obesidade infantil é uma condição multifatorial, resultante da interação entre fatores genéticos, ambientais, comportamentais e socioeconômicos. Compreender essas causas é fundamental para um tratamento eficaz.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6">
@@ -372,7 +380,7 @@ export default function ObesidadePediatricaPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-                Complicações da Obesidade Pediátrica
+                Complicações da Obesidade Infantil
               </h2>
               
               <div className="space-y-6 text-foreground/80 leading-relaxed">
@@ -500,7 +508,7 @@ export default function ObesidadePediatricaPage() {
               
               <div className="space-y-6 text-foreground/80 leading-relaxed">
                 <p>
-                  O diagnóstico de obesidade pediátrica é feito através de uma avaliação médica completa, que vai além do simples cálculo do IMC. O médico especialista considera diversos fatores para uma avaliação precisa.
+                  O diagnóstico de obesidade infantil é feito através de uma avaliação médica completa, que vai além do simples cálculo do IMC. O médico especialista considera diversos fatores para uma avaliação precisa.
                 </p>
 
                 <Card className="border-none shadow-soft bg-gradient-soft">
@@ -582,7 +590,7 @@ export default function ObesidadePediatricaPage() {
               
               <div className="space-y-6 text-foreground/80 leading-relaxed">
                 <p>
-                  O tratamento da obesidade pediátrica é multidisciplinar e deve ser individualizado, considerando a idade da criança, grau de obesidade, presença de complicações e contexto familiar. O objetivo é promover mudanças sustentáveis que melhorem a saúde e qualidade de vida.
+                  O tratamento da obesidade infantil é multidisciplinar e deve ser individualizado, considerando a idade da criança, grau de obesidade, presença de complicações e contexto familiar. O objetivo é promover mudanças sustentáveis que melhorem a saúde e qualidade de vida.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6">
@@ -743,12 +751,12 @@ export default function ObesidadePediatricaPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-                Prevenção da Obesidade Pediátrica
+                Prevenção da Obesidade Infantil
               </h2>
               
               <div className="space-y-6 text-foreground/80 leading-relaxed">
                 <p>
-                  A prevenção da obesidade pediátrica começa desde a gestação e deve ser uma preocupação constante ao longo da infância e adolescência. Estabelecer hábitos saudáveis desde cedo é fundamental.
+                  A prevenção da obesidade infantil começa desde a gestação e deve ser uma preocupação constante ao longo da infância e adolescência. Estabelecer hábitos saudáveis desde cedo é fundamental.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6">
@@ -849,7 +857,7 @@ export default function ObesidadePediatricaPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
-                Perguntas Frequentes sobre Obesidade Pediátrica
+                Perguntas Frequentes sobre Obesidade Infantil
               </h2>
               <p className="text-lg text-muted-foreground text-center mb-12">
                 Tire suas dúvidas sobre obesidade infantil, diagnóstico e tratamento
@@ -882,7 +890,7 @@ export default function ObesidadePediatricaPage() {
                 Depoimentos de Famílias Atendidas
               </h2>
               <p className="text-lg text-muted-foreground text-center mb-12">
-                Conheça a experiência de famílias que buscaram tratamento para obesidade pediátrica
+                Conheça a experiência de famílias que buscaram tratamento para obesidade infantil
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">
@@ -927,7 +935,7 @@ export default function ObesidadePediatricaPage() {
                   className="bg-foreground text-card hover:bg-foreground/90 gap-2 text-lg px-8 py-6"
                   asChild
                 >
-                  <CTALink href="/contato" label="Obesidade Pediátrica - CTA - Agendar Consulta">
+                  <CTALink href="/contato" label="Obesidade Infantil - CTA - Agendar Consulta">
                     <Calendar className="h-5 w-5" />
                     Agendar Consulta
                   </CTALink>
@@ -939,7 +947,7 @@ export default function ObesidadePediatricaPage() {
                   className="border-2 border-foreground text-foreground hover:bg-foreground/10 text-lg px-8 py-6 gap-2"
                   asChild
                 >
-                  <PhoneLink href="tel:+5531995626630" label="Obesidade Pediátrica - CTA">
+                  <PhoneLink href="tel:+5531995626630" label="Obesidade Infantil - CTA">
                     <Phone className="h-5 w-5" />
                     Ligar Agora
                   </PhoneLink>
@@ -951,7 +959,7 @@ export default function ObesidadePediatricaPage() {
                   className="border-2 border-foreground text-foreground hover:bg-foreground/10 text-lg px-8 py-6 gap-2"
                   asChild
                 >
-                  <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Obesidade Pediátrica - CTA">
+                  <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Obesidade Infantil - CTA">
                     <MessageCircle className="h-5 w-5" />
                     WhatsApp
                   </WhatsAppLink>

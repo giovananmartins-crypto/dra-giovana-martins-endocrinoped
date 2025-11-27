@@ -54,8 +54,8 @@ export const HeroSection = () => {
 
             <div className="flex flex-wrap gap-8 pt-6 justify-center">
               <div className="space-y-1">
-                <div className="text-3xl font-bold text-foreground">10+</div>
-                <div className="text-sm text-foreground/70">Anos de experiência</div>
+                <div className="text-3xl font-bold text-foreground">100%</div>
+                <div className="text-sm text-foreground/70">Atendimento humanizado</div>
               </div>
               <div className="space-y-1">
                 <div className="text-3xl font-bold text-foreground">500+</div>

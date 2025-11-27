@@ -60,7 +60,7 @@ export function PhysicianSchema() {
     "hasCredential": [
       {
         "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "CRM/MG [NÚMERO]",
+        "credentialCategory": "CRM-MG 79896",
         "recognizedBy": {
           "@type": "Organization",
           "name": "Conselho Regional de Medicina de Minas Gerais"
@@ -68,21 +68,15 @@ export function PhysicianSchema() {
       },
       {
         "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "RQE [NÚMERO]",
+        "credentialCategory": "CRM-BA 49737",
         "recognizedBy": {
           "@type": "Organization",
-          "name": "Sociedade Brasileira de Endocrinologia e Metabologia"
+          "name": "Conselho Regional de Medicina da Bahia"
         }
-      }
-    ],
-    "memberOf": [
-      {
-        "@type": "Organization",
-        "name": "Sociedade Brasileira de Endocrinologia e Metabologia"
       },
       {
-        "@type": "Organization",
-        "name": "Sociedade Brasileira de Pediatria"
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "RQE 66519"
       }
     ],
     "sameAs": [

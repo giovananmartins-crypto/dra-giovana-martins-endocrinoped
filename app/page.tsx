@@ -14,7 +14,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = generateMetadata({
   title: "Dra. Giovana Martins | Endocrinologista Pediátrica BH | Agende Consulta",
-  description: "Dra. Giovana Martins, endocrinologista pediátrica com 15 anos de experiência em Belo Horizonte. Especialista em puberdade precoce, diabetes infantil e crescimento.",
+  description: "Dra. Giovana Martins, endocrinologista pediátrica com formação de excelência em Belo Horizonte. Especialista em puberdade precoce, diabetes infantil e crescimento.",
   keywords: [
     "endocrinologista pediátrica",
     "endocrinologista infantil BH",
@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     question: "Quais condições a Dra. Giovana Martins trata?",
-    answer: "A Dra. Giovana Martins é especialista em puberdade precoce, diabetes infantil (tipo 1 e 2), baixa estatura, distúrbios da tireoide, obesidade pediátrica, problemas de crescimento, distúrbios da puberdade e outras condições endócrinas em crianças e adolescentes."
+    answer: "A Dra. Giovana Martins é especialista em puberdade precoce, diabetes infantil (tipo 1 e 2), baixa estatura, distúrbios da tireoide, obesidade infantil, problemas de crescimento, distúrbios da puberdade e outras condições endócrinas em crianças e adolescentes."
   },
   {
     question: "O consultório atende convênios?",
@@ -59,19 +59,19 @@ const faqs = [
 
 const testimonials = [
   {
-    author: "Maria Silva",
+    author: "Natália Nascimento",
     rating: 5,
-    reviewBody: "A Dra. Giovana Martins transformou nossa jornada com diabetes. Minha filha hoje leva uma vida normal e feliz graças ao cuidado e atenção que recebemos."
+    reviewBody: "A doutora é maravilhosa, atenciosa, carinhosa com as crianças. Explica tudo de forma que nós, que não entendemos do assunto, possamos entender tudo o que está acontecendo. Super educada. Simplesmente amei a consulta. Excelente profissional."
   },
   {
-    author: "João Santos",
+    author: "Anna Clara Lopes",
     rating: 5,
-    reviewBody: "Encontramos na Dra. Giovana Martins não apenas uma médica excepcional, mas alguém que realmente se importa. O acompanhamento do crescimento do nosso filho foi impecável."
+    reviewBody: "Excelente profissional! Sempre atenta ao que tem de melhor evidência, tratando com muita dedicação e carinho. Tenho plena confiança no seu trabalho!"
   },
   {
-    author: "Ana Paula",
+    author: "Halia Silva",
     rating: 5,
-    reviewBody: "O acolhimento e a clareza nas explicações fazem toda diferença. Sempre saímos das consultas tranquilos e bem informados sobre o tratamento."
+    reviewBody: "Amei o cuidado dela com meu filho. Super profissional e atenciosa."
   }
 ];
 

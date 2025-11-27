@@ -27,7 +27,7 @@ const defaultFaqs: FAQItem[] = [
   },
   {
     question: "Quais condições a Dra. Giovana Martins trata?",
-    answer: "A Dra. Giovana Martins é especialista em puberdade precoce, diabetes infantil (tipo 1 e 2), baixa estatura, distúrbios da tireoide, obesidade pediátrica, problemas de crescimento, distúrbios da puberdade e outras condições endócrinas em crianças e adolescentes."
+    answer: "A Dra. Giovana Martins é especialista em puberdade precoce, diabetes infantil (tipo 1 e 2), baixa estatura, distúrbios da tireoide, obesidade infantil, problemas de crescimento, distúrbios da puberdade e outras condições endócrinas em crianças e adolescentes."
   },
   {
     question: "O consultório atende convênios?",

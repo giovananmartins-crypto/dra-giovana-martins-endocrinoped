@@ -66,7 +66,7 @@ export const CTASection = () => {
 
           <div className="pt-8 border-t border-border/50">
             <p className="text-sm text-muted-foreground">
-              Atendimento de segunda a sexta, das 8h às 18h | Consultório em Belo Horizonte, MG
+              Atendimento de segunda a sexta, das 8h às 18h | Consultório em Belo Horizonte, MG e Guanambi-BA
             </p>
           </div>
         </div>

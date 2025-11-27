@@ -58,14 +58,22 @@ const faqs = [
 
 const testimonials = [
   {
-    author: "Mãe de paciente",
+    author: "Raquel",
+    relation: "Mãe de paciente",
     rating: 5,
-    reviewBody: "A Dra. Giovana Martins foi fundamental no diagnóstico e tratamento da puberdade precoce da nossa filha. O acompanhamento foi impecável e hoje nossa filha está se desenvolvendo normalmente. Recomendo muito!"
+    reviewBody: "Médica atenciosa, atendimento tranquilo. Consultório muito agradável, recepção muito boa."
   },
   {
-    author: "Pai de paciente",
+    author: "Aline",
+    relation: "Mãe de paciente",
     rating: 5,
-    reviewBody: "Encontramos na Dra. Giovana não apenas uma médica excepcional, mas alguém que realmente se importa. O tratamento da puberdade precoce do nosso filho foi um sucesso graças à dedicação e expertise dela."
+    reviewBody: "Atendimento bom e eficaz. Atenciosa e examina com calma."
+  },
+  {
+    author: "Tais",
+    relation: "Mãe de paciente",
+    rating: 5,
+    reviewBody: "Ela é muito boa, muito atenciosa, pergunta tudo, examina a menina direitinho. Gostei muito."
   }
 ];
 
@@ -178,7 +186,7 @@ export default function PuberdadePrecocePage() {
                   A puberdade precoce é uma condição endócrina que ocorre quando o desenvolvimento de características sexuais secundárias começa antes da idade considerada normal. Em meninas, isso acontece antes dos 8 anos, e em meninos, antes dos 9 anos. O diagnóstico e tratamento precoces são fundamentais para garantir o desenvolvimento adequado da criança e prevenir complicações futuras.
                 </p>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  A Dra. Giovana Martins, endocrinologista pediátrica com mais de 15 anos de experiência em Belo Horizonte, oferece avaliação especializada e tratamento personalizado para crianças com puberdade precoce, sempre com foco no bem-estar integral da criança e da família.
+                  A Dra. Giovana Martins, endocrinologista pediátrica com formação de excelência em Belo Horizonte, oferece avaliação especializada e tratamento personalizado para crianças com puberdade precoce, sempre com foco no bem-estar integral da criança e da família.
                 </p>
               </div>
             </div>
