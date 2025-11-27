@@ -41,14 +41,15 @@ export async function POST(request: NextRequest) {
     // Erro de validação
     if (error instanceof z.ZodError) {
       // Pegar a primeira mensagem de erro para exibir ao usuário
-      const firstError = error.errors[0];
+      const issues = error.issues;
+      const firstError = issues[0];
       const errorMessage = firstError?.message || 'Dados inválidos. Verifique os campos preenchidos.';
       
       return NextResponse.json(
         {
           success: false,
           message: errorMessage,
-          errors: error.errors.map(err => ({
+          errors: issues.map(err => ({
             field: err.path.join('.'),
             message: err.message,
           })),
