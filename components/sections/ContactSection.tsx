@@ -15,16 +15,70 @@ export const ContactSection = () => {
     phone: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    analytics.formSubmit('Contact Form');
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve para agendar sua consulta.",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    
+    // Desabilitar botão durante envio
+    setIsSubmitting(true);
+    
+    try {
+      // Enviar para API
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        // Sucesso
+        toast({
+          title: 'Mensagem enviada!',
+          description: 'Entraremos em contato em breve.',
+        });
+        
+        // Limpar formulário
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+        });
+
+        // Rastrear evento de conversão
+        analytics.formSubmit('Contact Form');
+      } else {
+        // Erro - mostrar mensagens específicas de validação
+        let errorMessage = data.message || 'Tente novamente mais tarde.';
+        
+        // Se houver erros de validação específicos, mostrar o primeiro
+        if (data.errors && Array.isArray(data.errors) && data.errors.length > 0) {
+          const firstError = data.errors[0];
+          errorMessage = firstError.message || errorMessage;
+        }
+        
+        toast({
+          title: 'Erro ao enviar',
+          description: errorMessage,
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      console.error('Erro ao enviar formulário:', error);
+      toast({
+        title: 'Erro ao enviar',
+        description: 'Tente novamente mais tarde.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -89,10 +143,11 @@ export const ContactSection = () => {
       <Button 
         type="submit"
         size="lg"
-        className="w-full bg-foreground text-card hover:bg-foreground/90 gap-2 text-lg py-6 shadow-lg hover:shadow-xl transition-all"
+        disabled={isSubmitting}
+        className="w-full bg-foreground text-card hover:bg-foreground/90 gap-2 text-lg py-6 shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <Calendar className="h-5 w-5" />
-        Enviar Solicitação de Agendamento
+        {isSubmitting ? 'Enviando...' : 'Enviar Solicitação de Agendamento'}
       </Button>
       
       <p className="text-xs text-muted-foreground text-center">

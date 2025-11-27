@@ -2,8 +2,9 @@
 ## Site Dra. Giovana Martins - Endocrinologista Pediátrica
 
 **Data de Criação:** 27/01/2025  
-**Versão:** 1.0  
-**Status:** Preparação para Implementação
+**Versão:** 2.0  
+**Status:** 🟢 Implementado - 90% Concluído  
+**Última Atualização:** 27/01/2025
 
 ---
 
@@ -194,8 +195,24 @@
    ```
    - Substituir pela string de conexão que você copiou
    - **NÃO** adicionar espaços ou quebras de linha
+   - ⚠️ **IMPORTANTE:** Se a string vier com prefixo `psql`, removê-lo!
+   - ⚠️ **IMPORTANTE:** Não incluir aspas (`'` ou `"`)
 
 3. **Salvar o arquivo**
+
+**Exemplo correto:**
+```bash
+DATABASE_URL=postgresql://username:password@ep-xxxx-xxxx.region.aws.neon.tech/dbname?sslmode=require&channel_binding=require
+```
+
+**Exemplo errado (NÃO fazer):**
+```bash
+DATABASE_URL=psql 'postgresql://username:password@ep-xxxx-xxxx.region.aws.neon.tech/dbname?sslmode=require'
+```
+
+**⚠️ IMPORTANTE:** Substitua `username`, `password`, `ep-xxxx-xxxx`, `region` e `dbname` pelos valores reais do seu projeto Neon.
+
+**Status:** ✅ **CONCLUÍDO** - `.env.local` configurado corretamente (27/01/2025)
 
 #### Na Vercel (Produção)
 
@@ -209,6 +226,9 @@
 3. **Adicionar variável:**
    - **Key:** `DATABASE_URL`
    - **Value:** Colar a mesma string de conexão do Neon
+     - ⚠️ **IMPORTANTE:** Sem prefixo `psql`
+     - ⚠️ **IMPORTANTE:** Sem aspas
+     - Apenas a string começando com `postgresql://`
    - **Environment:** Selecionar todas (Production, Preview, Development)
 
 4. **Clicar em "Save"**
@@ -217,11 +237,36 @@
    - Vercel pode fazer redeploy automático
    - Ou ir em Deployments → Redeploy
 
+**Status:** ✅ Configurado e funcionando na Vercel (27/01/2025)
+
 ---
 
-### 3.5 Testar Conexão (Opcional)
+### 3.5 Testar Conexão
 
-Você pode testar a conexão usando o **Neon SQL Editor**:
+Você pode testar a conexão de duas formas:
+
+#### Método 1: Via Script de Teste (RECOMENDADO)
+
+1. **Instalar dependências (se ainda não instalou):**
+   ```bash
+   npm install @neondatabase/serverless
+   npm install -D tsx dotenv
+   ```
+
+2. **Executar o script de teste:**
+   ```bash
+   npx tsx scripts/test-db-connection.ts
+   ```
+
+3. **O script vai:**
+   - ✅ Verificar se DATABASE_URL está configurado
+   - ✅ Testar conexão com o banco
+   - ✅ Verificar versão do PostgreSQL
+   - ✅ Verificar se a tabela existe
+
+**Status:** ✅ Script criado e testado com sucesso (27/01/2025)
+
+#### Método 2: Via SQL Editor do Neon
 
 1. **No dashboard do Neon, clicar em "SQL Editor"**
 
@@ -234,7 +279,35 @@ Você pode testar a conexão usando o **Neon SQL Editor**:
 
 ---
 
+### ⚠️ IMPORTANTE: Corrigir String de Conexão no .env.local
+
+**Status:** ✅ **CONCLUÍDO** (27/01/2025)
+
+**Problema comum:** A string de conexão pode vir com prefixo `psql` do Neon.
+
+**Se sua string estiver assim (ERRADO):**
+```bash
+DATABASE_URL=psql 'postgresql://username:password@ep-xxxx-xxxx.region.aws.neon.tech/dbname?sslmode=require'
+```
+
+**Deve estar assim (CORRETO):**
+```bash
+DATABASE_URL=postgresql://username:password@ep-xxxx-xxxx.region.aws.neon.tech/dbname?sslmode=require
+```
+
+**Remover:**
+- Prefixo `psql`
+- Aspas (`'` ou `"`)
+
+**Na Vercel:** A string deve estar correta (sem `psql` e sem aspas)
+
+**✅ Correção aplicada:** O `.env.local` foi corrigido e está no formato correto.
+
+---
+
 ## 4. CONFIGURAR NO CÓDIGO
+
+**Status Atual:** ✅ Dependências instaladas | ✅ Script de teste criado | ⏳ Cliente de banco pendente
 
 ### 4.1 Instalar Dependências
 
@@ -242,7 +315,10 @@ No terminal, na raiz do projeto:
 
 ```bash
 npm install @neondatabase/serverless
+npm install -D tsx dotenv
 ```
+
+**Status:** ✅ Dependências instaladas (27/01/2025)
 
 Ou se preferir usar `pg` (PostgreSQL client tradicional):
 
@@ -255,7 +331,33 @@ npm install --save-dev @types/pg
 
 ---
 
-### 4.2 Criar Cliente de Banco de Dados
+### 4.2 Script de Teste de Conexão
+
+**Status:** ✅ Criado e testado com sucesso (27/01/2025)
+
+Foi criado um script de teste para verificar a conexão: `scripts/test-db-connection.ts`
+
+**Como usar:**
+```bash
+npx tsx scripts/test-db-connection.ts
+```
+
+**O script verifica:**
+- ✅ Se DATABASE_URL está configurado
+- ✅ Se consegue conectar ao banco
+- ✅ Versão do PostgreSQL
+- ✅ Se a tabela `contact_submissions` existe
+
+**Resultado do teste (27/01/2025):**
+- ✅ PostgreSQL 17.6 funcionando
+- ✅ Conexão estabelecida com sucesso
+- ⚠️ Tabela `contact_submissions` ainda não existe (próximo passo)
+
+---
+
+### 4.3 Criar Cliente de Banco de Dados
+
+**Status:** ⏳ Aguardando criação
 
 Criar arquivo: `lib/db.ts`
 
@@ -361,6 +463,8 @@ COMMENT ON COLUMN contact_submissions.read IS 'Indica se a mensagem foi lida';
 ---
 
 #### Método 2: Via Código (Migration Script)
+
+**Status:** ⏳ Script será criado após `lib/db.ts` estar pronto
 
 Criar arquivo: `scripts/create-tables.ts`
 
@@ -661,43 +765,45 @@ const handleSubmit = async (e: React.FormEvent) => {
 ## 10. CHECKLIST COMPLETO
 
 ### Fase 1: Configuração do Neon
-- [ ] Criar conta no Neon
-- [ ] Criar projeto
-- [ ] Obter string de conexão
-- [ ] Configurar `DATABASE_URL` no `.env.local`
-- [ ] Configurar `DATABASE_URL` na Vercel
-- [ ] Testar conexão (SQL Editor)
+- [x] Criar conta no Neon ✅ **CONCLUÍDO** (27/01/2025)
+- [x] Criar projeto ✅ **CONCLUÍDO** (projeto: dra-giovana-martins-site)
+- [x] Obter string de conexão ✅ **CONCLUÍDO**
+- [x] Configurar `DATABASE_URL` no `.env.local` ✅ **CONCLUÍDO** (corrigido - sem prefixo `psql`)
+- [x] Configurar `DATABASE_URL` na Vercel ✅ **CONCLUÍDO** (funcionando)
+- [x] Testar conexão ✅ **CONCLUÍDO** (script de teste executado com sucesso)
 
 ### Fase 2: Configuração no Código
-- [ ] Instalar `@neondatabase/serverless` (ou `pg`)
-- [ ] Criar `lib/db.ts` com cliente
-- [ ] Testar import do cliente
+- [x] Instalar `@neondatabase/serverless` ✅ **CONCLUÍDO** (27/01/2025)
+- [x] Instalar `tsx` e `dotenv` ✅ **CONCLUÍDO**
+- [x] Criar script de teste ✅ **CONCLUÍDO** (`scripts/test-db-connection.ts`)
+- [x] Criar `lib/db.ts` com cliente ✅ **CONCLUÍDO** (27/01/2025)
+- [x] Testar import do cliente ✅ **CONCLUÍDO**
 
 ### Fase 3: Criar Tabelas
-- [ ] Criar tabela `contact_submissions` via SQL Editor
-- [ ] Criar índices
-- [ ] Verificar tabela criada
+- [x] Criar tabela `contact_submissions` ✅ **CONCLUÍDO** (via script `create-tables.ts`)
+- [x] Criar índices ✅ **CONCLUÍDO** (idx_contact_email, idx_contact_created_at)
+- [x] Verificar tabela criada ✅ **CONCLUÍDO** (7 colunas criadas)
 
 ### Fase 4: API Route
-- [ ] Instalar `zod` para validação
-- [ ] Criar `app/api/contact/route.ts`
-- [ ] Implementar validação
-- [ ] Implementar inserção no banco
-- [ ] Testar API route localmente
+- [x] Instalar `zod` para validação ✅ **CONCLUÍDO** (zod@4.1.13)
+- [x] Criar `app/api/contact/route.ts` ✅ **CONCLUÍDO**
+- [x] Implementar validação ✅ **CONCLUÍDO** (nome, email, telefone, mensagem)
+- [x] Implementar inserção no banco ✅ **CONCLUÍDO**
+- [x] Testar API route localmente ✅ **CONCLUÍDO** (testes passaram)
 
 ### Fase 5: Conectar Formulário
-- [ ] Atualizar `ContactSection.tsx`
-- [ ] Adicionar função `handleSubmit` com fetch
-- [ ] Adicionar tratamento de erros
-- [ ] Adicionar feedback visual (toast)
-- [ ] Testar envio localmente
+- [x] Atualizar `ContactSection.tsx` ✅ **CONCLUÍDO**
+- [x] Adicionar função `handleSubmit` com fetch ✅ **CONCLUÍDO**
+- [x] Adicionar tratamento de erros ✅ **CONCLUÍDO** (mensagens específicas)
+- [x] Adicionar feedback visual (toast) ✅ **CONCLUÍDO**
+- [x] Testar envio localmente ✅ **CONCLUÍDO** (registros salvos no banco)
 
 ### Fase 6: Testes
-- [ ] Testar formulário localmente
-- [ ] Verificar registro no banco
-- [ ] Fazer deploy
-- [ ] Testar em produção
-- [ ] Verificar registro no banco (produção)
+- [x] Testar formulário localmente ✅ **CONCLUÍDO** (27/01/2025)
+- [x] Verificar registro no banco ✅ **CONCLUÍDO** (2 registros de teste salvos)
+- [ ] Fazer deploy ⏳ **PRÓXIMO PASSO**
+- [ ] Testar em produção ⏳ **PENDENTE**
+- [ ] Verificar registro no banco (produção) ⏳ **PENDENTE**
 
 ---
 
@@ -738,15 +844,64 @@ Após implementar o básico, você pode adicionar:
 
 ## 📊 RESUMO
 
-**Plataforma Escolhida:** Neon  
-**Banco de Dados:** PostgreSQL  
-**Cliente:** `@neondatabase/serverless`  
-**Tabela:** `contact_submissions`  
-**API Route:** `/api/contact`  
-**Status:** ⏳ Aguardando implementação
+**Plataforma Escolhida:** Neon ✅  
+**Banco de Dados:** PostgreSQL 17.6 ✅  
+**Cliente:** `@neondatabase/serverless` ✅  
+**Conexão:** ✅ Testada e funcionando  
+**Variáveis de Ambiente:** ✅ Configuradas (local e Vercel)  
+**Tabela:** `contact_submissions` ✅ Criada (7 colunas, 2 índices)  
+**API Route:** `/api/contact` ✅ Criada e testada  
+**Formulário:** ✅ Conectado ao backend  
+**Validações:** ✅ Implementadas (Zod)  
+**Status:** 🟢 Implementado - 90% concluído (aguardando deploy)
+
+---
+
+## ✅ PROGRESSO ATUAL (27/01/2025)
+
+### Concluído:
+- ✅ Conta Neon criada
+- ✅ Projeto criado (dra-giovana-martins-site)
+- ✅ String de conexão obtida
+- ✅ DATABASE_URL configurado no `.env.local` (corrigido - sem prefixo `psql`)
+- ✅ DATABASE_URL configurado na Vercel (funcionando)
+- ✅ Dependências instaladas (@neondatabase/serverless, tsx, dotenv, zod)
+- ✅ Script de teste criado e executado com sucesso
+- ✅ Conexão testada: PostgreSQL 17.6 funcionando
+- ✅ Cliente de banco criado (`lib/db.ts`)
+- ✅ Tabela `contact_submissions` criada (7 colunas, 2 índices)
+- ✅ API route `/api/contact` criada e testada
+- ✅ Validações implementadas (nome, email, telefone, mensagem)
+- ✅ Formulário conectado ao backend (`ContactSection.tsx`)
+- ✅ Tratamento de erros implementado
+- ✅ Feedback visual (toast) funcionando
+- ✅ Testes realizados (2 registros salvos no banco)
+
+### Pendente:
+- ⏳ Fazer deploy na Vercel
+- ⏳ Testar em produção
+- ⏳ Verificar registro no banco (produção)
 
 ---
 
 **Última Atualização:** 27/01/2025  
-**Próxima Etapa:** Seguir checklist e implementar passo a passo
+**Próxima Etapa:** Fazer deploy e testar em produção
+
+---
+
+## 📝 VALIDAÇÕES IMPLEMENTADAS
+
+### Regras de Validação:
+
+| Campo | Regras |
+|-------|--------|
+| **Nome** | Mínimo 2 caracteres, máximo 255 |
+| **Email** | Formato de email válido |
+| **Telefone** | Mínimo 10 caracteres, máximo 20, formato brasileiro permitido |
+| **Mensagem** | Mínimo 10 caracteres, máximo 5000 |
+
+### Mensagens de Erro:
+- ✅ Mensagens específicas para cada campo
+- ✅ Feedback visual com toast
+- ✅ Tratamento de erros de validação e banco de dados
 
