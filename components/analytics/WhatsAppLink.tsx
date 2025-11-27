@@ -2,15 +2,12 @@
 
 import { analytics } from "@/lib/analytics";
 import { ReactNode } from "react";
+import React from "react";
 
-interface WhatsAppLinkProps {
+interface WhatsAppLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
   children: ReactNode;
   label?: string;
-  className?: string;
-  target?: string;
-  rel?: string;
-  [key: string]: any;
 }
 
 export function WhatsAppLink({ 

@@ -903,7 +903,7 @@ export default function ObesidadePediatricaPage() {
                         ))}
                       </div>
                       <p className="text-foreground/80 leading-relaxed mb-4">
-                        "{testimonial.reviewBody}"
+                        &ldquo;{testimonial.reviewBody}&rdquo;
                       </p>
                       <p className="text-sm text-muted-foreground font-medium">
                         — {testimonial.author}

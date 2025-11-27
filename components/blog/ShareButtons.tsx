@@ -1,6 +1,6 @@
 "use client";
 
-import { Facebook, Twitter, Linkedin, Link2, Copy, Check } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Link2, Check } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -10,17 +10,11 @@ interface ShareButtonsProps {
   description?: string;
 }
 
-export function ShareButtons({ url, title, description }: ShareButtonsProps) {
+export function ShareButtons({ url, title }: ShareButtonsProps) {
   const [copied, setCopied] = useState(false);
   const fullUrl = typeof window !== "undefined" 
     ? `${window.location.origin}${url}`
     : url;
-
-  const shareData = {
-    title,
-    text: description || title,
-    url: fullUrl,
-  };
 
   const handleShare = async (platform: "facebook" | "twitter" | "linkedin") => {
     let shareUrl = "";

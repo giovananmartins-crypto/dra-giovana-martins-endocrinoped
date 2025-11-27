@@ -5,7 +5,7 @@ import { generateMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Phone, MessageCircle, CheckCircle2, AlertCircle, Stethoscope, Heart, Activity } from "lucide-react";
+import { Calendar, Phone, MessageCircle, CheckCircle2, AlertCircle, Stethoscope, Activity } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { WhatsAppLink } from "@/components/analytics/WhatsAppLink";
@@ -625,7 +625,7 @@ export default function DiabetesInfantilPage() {
                         ))}
                       </div>
                       <p className="text-foreground leading-relaxed italic">
-                        "{testimonial.reviewBody}"
+                        &ldquo;{testimonial.reviewBody}&rdquo;
                       </p>
                       <div className="pt-4 border-t border-border">
                         <div className="font-semibold text-foreground">

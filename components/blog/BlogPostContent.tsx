@@ -2,6 +2,7 @@ import { Calendar, Clock, User } from "lucide-react";
 import { formatDate } from "@/lib/utils";
 import type { BlogPost } from "@/lib/types/blog";
 import { ShareButtons } from "./ShareButtons";
+import Image from "next/image";
 
 interface BlogPostContentProps {
   post: BlogPost;
@@ -56,11 +57,13 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
 
       {/* Imagem de Destaque */}
       {post.featuredImage && (
-        <div className="mb-8 rounded-lg overflow-hidden">
-          <img
+        <div className="mb-8 rounded-lg overflow-hidden relative w-full aspect-video">
+          <Image
             src={post.featuredImage}
             alt={`${post.title} - Artigo sobre ${post.category} por Dra. Giovana Martins, Endocrinologista Pediátrica`}
-            className="w-full h-auto object-cover"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 800px"
           />
         </div>
       )}

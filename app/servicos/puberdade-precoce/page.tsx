@@ -643,7 +643,7 @@ export default function PuberdadePrecocePage() {
                         ))}
                       </div>
                       <p className="text-foreground leading-relaxed italic">
-                        "{testimonial.reviewBody}"
+                        &ldquo;{testimonial.reviewBody}&rdquo;
                       </p>
                       <div className="pt-4 border-t border-border">
                         <div className="font-semibold text-foreground">

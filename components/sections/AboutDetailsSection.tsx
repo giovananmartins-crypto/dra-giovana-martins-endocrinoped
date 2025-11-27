@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Award, Briefcase, Heart, BookOpen, Calendar } from "lucide-react";
+import { GraduationCap, Award, Briefcase, Heart, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";

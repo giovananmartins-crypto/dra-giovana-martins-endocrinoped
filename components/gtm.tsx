@@ -1,5 +1,7 @@
 'use client';
 
+import Script from 'next/script';
+
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 if (!GTM_ID) {
@@ -7,10 +9,14 @@ if (!GTM_ID) {
 }
 
 export function GTM() {
+  if (!GTM_ID) return null;
+
   return (
     <>
       {/* Google Tag Manager - Script no Head */}
-      <script
+      <Script
+        id="gtm-script"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

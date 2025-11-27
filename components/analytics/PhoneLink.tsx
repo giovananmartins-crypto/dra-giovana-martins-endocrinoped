@@ -2,13 +2,12 @@
 
 import { analytics } from "@/lib/analytics";
 import { ReactNode } from "react";
+import React from "react";
 
-interface PhoneLinkProps {
+interface PhoneLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
   children: ReactNode;
   label?: string;
-  className?: string;
-  [key: string]: any;
 }
 
 export function PhoneLink({ 

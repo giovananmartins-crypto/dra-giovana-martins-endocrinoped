@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Award, Users, Heart, ChevronLeft, ChevronRight } from "lucide-react";
+import { GraduationCap, Award, Users, Heart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -23,14 +23,6 @@ export const AboutSection = () => {
       alt: "Dra. Giovana Martins - Endocrinologista Pediátrica dedicada ao cuidado de crianças e adolescentes"
     }
   ];
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
 
   // Auto-rotate carousel every 8 seconds
   useEffect(() => {

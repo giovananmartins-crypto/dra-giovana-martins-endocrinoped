@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 
 /**
  * Schema Markup para LocalBusiness
@@ -136,7 +135,7 @@ export function MedicalConditionSchema({
   causes?: string[];
   treatment?: string;
 }) {
-  const schema: any = {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "MedicalCondition",
     "name": name,
@@ -387,7 +386,7 @@ export function WebPageSchema({
   const baseUrl = "https://www.giovanaendocrinoped.com.br";
   const fullUrl = url.startsWith("http") ? url : `${baseUrl}${url}`;
   
-  const schema: any = {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": name,

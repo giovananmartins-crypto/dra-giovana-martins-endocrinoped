@@ -3,14 +3,14 @@
 import { analytics } from "@/lib/analytics";
 import Link from "next/link";
 import { ReactNode } from "react";
+import React from "react";
 
-interface CTALinkProps {
+interface CTALinkProps extends React.ComponentPropsWithoutRef<typeof Link> {
   href: string;
   children: ReactNode;
   label: string;
   className?: string;
   onClick?: () => void;
-  [key: string]: any;
 }
 
 export function CTALink({ 
