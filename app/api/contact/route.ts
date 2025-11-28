@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { sql } from '@/lib/db';
 import { z } from 'zod';
+import { resend } from '@/lib/email';
+import { getContactEmailTemplate } from '@/lib/email-templates';
 
 // Schema de validação usando Zod
 const contactSchema = z.object({
@@ -27,6 +29,25 @@ export async function POST(request: NextRequest) {
       VALUES (${validatedData.name}, ${validatedData.email}, ${validatedData.phone || null}, ${validatedData.message})
       RETURNING id, created_at;
     `;
+
+    // Enviar email de notificação (não bloqueia a resposta se falhar)
+    try {
+      await resend.emails.send({
+        from: process.env.EMAIL_FROM || 'contato@giovanaendocrinoped.com.br',
+        to: process.env.EMAIL_TO || 'giovanaendocrinoped@gmail.com',
+        subject: `Nova mensagem de ${validatedData.name} - Site Dra. Giovana`,
+        html: getContactEmailTemplate({
+          name: validatedData.name,
+          email: validatedData.email,
+          phone: validatedData.phone,
+          message: validatedData.message,
+        }),
+      });
+    } catch (emailError) {
+      // Log do erro mas não falhar a requisição
+      // O contato já foi salvo no banco, então continuamos normalmente
+      console.error('Erro ao enviar email:', emailError);
+    }
 
     // Retornar sucesso
     return NextResponse.json(
