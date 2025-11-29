@@ -172,13 +172,14 @@ export default function Contact() {
                 <Card className="border-none shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-green-50 to-green-100/50 group cursor-pointer">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center flex-shrink-0 relative group-hover:scale-110 transition-transform">
+                      <div className="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                         <Image
                           src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
                           alt="WhatsApp"
                           width={56}
                           height={56}
                           className="object-contain p-2"
+                          unoptimized
                         />
                       </div>
                       <div className="flex-1">
@@ -193,13 +194,14 @@ export default function Contact() {
                           asChild
                         >
                           <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Contact Page Card">
-                            <div className="relative w-4 h-4 mr-2">
+                            <div className="w-4 h-4 mr-2">
                               <Image
                                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
                                 alt="WhatsApp"
                                 width={16}
                                 height={16}
                                 className="object-contain"
+                                unoptimized
                               />
                             </div>
                             Abrir WhatsApp
