@@ -1,12 +1,30 @@
+import dynamic from "next/dynamic";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/sections/CTASection";
 import { FAQSection } from "@/components/sections/FAQSection";
-import { ResourcesList } from "@/components/resources/ResourcesList";
 import { FileText, Sparkles, CheckCircle2, TrendingUp } from "lucide-react";
 import { generateMetadata } from "@/lib/metadata";
 import { LocalBusinessSchema, FAQPageSchema } from "@/lib/schema-markup";
 import type { Metadata } from "next";
+
+// Lazy loading do ResourcesList (usado apenas nesta página)
+const ResourcesList = dynamic(() => import("@/components/resources/ResourcesList").then(mod => ({ default: mod.ResourcesList })), {
+  loading: () => (
+    <div className="py-16">
+      <div className="container mx-auto px-4">
+        <div className="animate-pulse space-y-6">
+          <div className="h-8 bg-muted rounded w-1/3"></div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6].map(i => (
+              <div key={i} className="h-48 bg-muted rounded"></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  ),
+});
 
 export const metadata: Metadata = generateMetadata({
   title: "Recursos Educativos | Materiais Gratuitos | Dra. Giovana Martins",

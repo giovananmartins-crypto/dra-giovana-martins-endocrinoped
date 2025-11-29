@@ -33,6 +33,7 @@ export const Header = () => {
                 fill
                 className="object-contain"
                 priority
+                sizes="(max-width: 768px) 96px, 112px"
               />
             </div>
             <div className="hidden md:block relative h-32 mt-4 -mb-6 -ml-[34px]">

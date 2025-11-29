@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { PerformanceLinks } from "@/components/PerformanceLinks";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -91,6 +92,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Performance Links - Preconnect para GTM */}
+        {/* IMPORTANTE: Apenas GTM - ele gerencia GA4 e Google Ads internamente */}
+        {/* NÃO adicionar preconnect para google-analytics.com - evitaria duplicação */}
+        <PerformanceLinks />
         {/* Google Tag Manager - Script no Head (via Next.js Script) */}
         <Script
           id="gtm-script"

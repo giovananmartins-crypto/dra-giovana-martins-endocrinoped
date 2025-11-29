@@ -1,10 +1,28 @@
+import dynamic from "next/dynamic";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/sections/CTASection";
 import { BlogSchema, WebPageSchema } from "@/lib/schema-markup";
 import { generateMetadata } from "@/lib/metadata";
-import { BlogClient } from "./BlogClient";
 import type { Metadata } from "next";
+
+// Lazy loading do BlogClient (contém BlogFilters e BlogPagination)
+const BlogClient = dynamic(() => import("./BlogClient").then(mod => ({ default: mod.BlogClient })), {
+  loading: () => (
+    <div className="min-h-screen pt-32 pb-20">
+      <div className="container mx-auto px-4">
+        <div className="animate-pulse space-y-8">
+          <div className="h-12 bg-muted rounded w-1/3"></div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[1, 2, 3].map(i => (
+              <div key={i} className="h-64 bg-muted rounded"></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  ),
+});
 
 export const metadata: Metadata = generateMetadata({
   title: "Blog Dra. Giovana Martins | Endocrinologia Pediátrica | Dicas e Notícias",

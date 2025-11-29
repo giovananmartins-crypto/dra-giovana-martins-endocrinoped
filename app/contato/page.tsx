@@ -178,6 +178,7 @@ export default function Contact() {
                           alt="WhatsApp"
                           fill
                           className="object-contain p-2"
+                          sizes="56px"
                         />
                       </div>
                       <div className="flex-1">
@@ -198,6 +199,7 @@ export default function Contact() {
                                 alt="WhatsApp"
                                 fill
                                 className="object-contain"
+                                sizes="16px"
                               />
                             </div>
                             Abrir WhatsApp

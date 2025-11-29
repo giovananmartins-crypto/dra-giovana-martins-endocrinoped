@@ -17,6 +17,7 @@ export const Footer = () => {
                 alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
                 fill
                 className="object-contain"
+                sizes="224px"
               />
             </div>
             <p className="text-card/80 leading-relaxed mb-4">
@@ -71,6 +72,7 @@ export const Footer = () => {
                         alt="Facebook"
                         fill
                         className="object-contain"
+                        sizes="48px"
                       />
                     </Link>
                     <span className="text-xs text-card/60 mt-1">Em breve</span>
@@ -87,6 +89,7 @@ export const Footer = () => {
                       alt="Instagram"
                       fill
                       className="object-contain"
+                      sizes="48px"
                     />
                   </Link>
                   <Link
@@ -102,6 +105,7 @@ export const Footer = () => {
                       alt="WhatsApp"
                       fill
                       className="object-contain"
+                      sizes="48px"
                     />
                   </Link>
                   <Link
@@ -117,6 +121,7 @@ export const Footer = () => {
                       alt="Doctoralia"
                       fill
                       className="object-contain"
+                      sizes="48px"
                     />
                   </Link>
                 </div>
