@@ -287,9 +287,20 @@ export function ReviewSchema({
     "@type": "Review",
     "itemReviewed": {
       "@type": "Physician",
-      "name": "Dra. Giovana Martins",
+      "name": "Dra. Giovana Martins - Endocrinologista Pediátrica",
+      "alternateName": "Giovana Neves Martins",
       "medicalSpecialty": "Endocrinologia Pediátrica",
-      "url": "https://www.giovanaendocrinoped.com.br"
+      "specialty": "Endocrinologia Pediátrica",
+      "url": "https://www.giovanaendocrinoped.com.br",
+      "image": "https://www.giovanaendocrinoped.com.br/images/dra-giovana/01-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Turquesa, 347 - Prado",
+        "addressLocality": "Belo Horizonte",
+        "addressRegion": "MG",
+        "postalCode": "30411-177",
+        "addressCountry": "BR"
+      }
     },
     "author": {
       "@type": "Person",
@@ -298,9 +309,11 @@ export function ReviewSchema({
     "reviewRating": {
       "@type": "Rating",
       "ratingValue": rating,
-      "bestRating": 5
+      "bestRating": 5,
+      "worstRating": 1
     },
-    "reviewBody": reviewBody
+    "reviewBody": reviewBody,
+    "datePublished": new Date().toISOString().split('T')[0]
   };
 
   return (
