@@ -16,9 +16,8 @@ export const Footer = () => {
               <img
                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-logo.png"
                 alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
-                width={224}
-                height={224}
-                className="object-contain w-full h-full"
+                className="w-full h-full object-contain"
+                style={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' }}
                 suppressHydrationWarning
               />
             </div>
@@ -65,75 +64,47 @@ export const Footer = () => {
                   <div className="flex flex-col items-center">
                     <Link
                       href="#"
-                      className="w-12 h-12 hover:opacity-80 transition-opacity opacity-50 cursor-not-allowed flex items-center justify-center"
+                      className="w-12 h-12 hover:opacity-80 transition-opacity opacity-50 cursor-not-allowed bg-contain bg-center bg-no-repeat"
+                      style={{
+                        backgroundImage: 'url(/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-facebook.png)'
+                      }}
                       aria-label="Facebook"
                       onClick={(e) => e.preventDefault()}
-                    >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-facebook.png"
-                        alt="Facebook"
-                        width={48}
-                        height={48}
-                        className="object-contain"
-                        suppressHydrationWarning
-                      />
-                    </Link>
+                    />
                     <span className="text-xs text-card/60 mt-1">Em breve</span>
                   </div>
                   <Link
                     href="https://www.instagram.com/giovana.endocrinoped/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 hover:opacity-80 transition-opacity flex items-center justify-center"
+                    className="w-12 h-12 hover:opacity-80 transition-opacity bg-contain bg-center bg-no-repeat"
+                    style={{
+                      backgroundImage: 'url(/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-intagram.png)'
+                    }}
                     aria-label="Instagram"
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-intagram.png"
-                      alt="Instagram"
-                      width={48}
-                      height={48}
-                      className="object-contain"
-                      suppressHydrationWarning
-                    />
-                  </Link>
+                  />
                   <Link
                     href="https://wa.me/5531995626630"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 hover:opacity-80 transition-opacity flex items-center justify-center"
+                    className="w-12 h-12 hover:opacity-80 transition-opacity bg-contain bg-center bg-no-repeat"
+                    style={{
+                      backgroundImage: 'url(/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png)'
+                    }}
                     aria-label="WhatsApp"
                     onClick={() => analytics.whatsappClick('Footer')}
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
-                      alt="WhatsApp"
-                      width={48}
-                      height={48}
-                      className="object-contain"
-                      suppressHydrationWarning
-                    />
-                  </Link>
+                  />
                   <Link
                     href="https://www.doctoralia.com.br/giovana-neves-martins-4/endocrinologista-pediatrico/betim"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 hover:opacity-80 transition-opacity flex items-center justify-center"
+                    className="w-12 h-12 hover:opacity-80 transition-opacity bg-contain bg-center bg-no-repeat"
+                    style={{
+                      backgroundImage: 'url(/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-doctoralia.png)'
+                    }}
                     aria-label="Doctoralia"
                     onClick={() => analytics.doctoraliaClick('Footer')}
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-doctoralia.png"
-                      alt="Doctoralia"
-                      width={48}
-                      height={48}
-                      className="object-contain"
-                      suppressHydrationWarning
-                    />
-                  </Link>
+                  />
                 </div>
               </li>
             </ul>

@@ -172,17 +172,15 @@ export default function Contact() {
                 <Card className="border-none shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-green-50 to-green-100/50 group cursor-pointer">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
-                          alt="WhatsApp"
-                          width={56}
-                          height={56}
-                          className="object-contain p-2"
-                          suppressHydrationWarning
-                        />
-                      </div>
+                      <div 
+                        className="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform bg-contain bg-center bg-no-repeat"
+                        style={{
+                          backgroundImage: 'url(/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png)',
+                          padding: '0.5rem'
+                        }}
+                        role="img"
+                        aria-label="WhatsApp"
+                      />
                       <div className="flex-1">
                         <h3 className="font-bold text-foreground mb-2 text-lg">WhatsApp</h3>
                         <p className="text-muted-foreground mb-4 text-lg font-semibold">
@@ -195,17 +193,14 @@ export default function Contact() {
                           asChild
                         >
                           <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Contact Page Card">
-                            <div className="w-4 h-4 mr-2">
-                              {/* eslint-disable-next-line @next/next/no-img-element */}
-                              <img
-                                src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
-                                alt="WhatsApp"
-                                width={16}
-                                height={16}
-                                className="object-contain"
-                                suppressHydrationWarning
-                              />
-                            </div>
+                            <div 
+                              className="w-4 h-4 mr-2 bg-contain bg-center bg-no-repeat"
+                              style={{
+                                backgroundImage: 'url(/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png)'
+                              }}
+                              role="img"
+                              aria-label="WhatsApp"
+                            />
                             Abrir WhatsApp
                           </WhatsAppLink>
                         </Button>
