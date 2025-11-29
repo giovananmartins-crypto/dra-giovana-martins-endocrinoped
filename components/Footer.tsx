@@ -11,14 +11,14 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-4">
           <div>
-            <div className="w-56 h-56 mb-4">
-              <Image
+            <div className="w-56 h-56 mb-4 flex items-center justify-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-logo.png"
                 alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
                 width={224}
                 height={224}
-                className="object-contain"
-                unoptimized
+                className="object-contain w-full h-full"
               />
             </div>
             <p className="text-card/80 leading-relaxed mb-4">
@@ -64,17 +64,17 @@ export const Footer = () => {
                   <div className="flex flex-col items-center">
                     <Link
                       href="#"
-                      className="w-12 h-12 hover:opacity-80 transition-opacity opacity-50 cursor-not-allowed"
+                      className="w-12 h-12 hover:opacity-80 transition-opacity opacity-50 cursor-not-allowed flex items-center justify-center"
                       aria-label="Facebook"
                       onClick={(e) => e.preventDefault()}
                     >
-                      <Image
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
                         src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-facebook.png"
                         alt="Facebook"
                         width={48}
                         height={48}
                         className="object-contain"
-                        unoptimized
                       />
                     </Link>
                     <span className="text-xs text-card/60 mt-1">Em breve</span>
@@ -83,50 +83,50 @@ export const Footer = () => {
                     href="https://www.instagram.com/giovana.endocrinoped/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 hover:opacity-80 transition-opacity"
+                    className="w-12 h-12 hover:opacity-80 transition-opacity flex items-center justify-center"
                     aria-label="Instagram"
                   >
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-intagram.png"
                       alt="Instagram"
                       width={48}
                       height={48}
                       className="object-contain"
-                      unoptimized
                     />
                   </Link>
                   <Link
                     href="https://wa.me/5531995626630"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 hover:opacity-80 transition-opacity"
+                    className="w-12 h-12 hover:opacity-80 transition-opacity flex items-center justify-center"
                     aria-label="WhatsApp"
                     onClick={() => analytics.whatsappClick('Footer')}
                   >
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
                       alt="WhatsApp"
                       width={48}
                       height={48}
                       className="object-contain"
-                      unoptimized
                     />
                   </Link>
                   <Link
                     href="https://www.doctoralia.com.br/giovana-neves-martins-4/endocrinologista-pediatrico/betim"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 hover:opacity-80 transition-opacity"
+                    className="w-12 h-12 hover:opacity-80 transition-opacity flex items-center justify-center"
                     aria-label="Doctoralia"
                     onClick={() => analytics.doctoraliaClick('Footer')}
                   >
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-doctoralia.png"
                       alt="Doctoralia"
                       width={48}
                       height={48}
                       className="object-contain"
-                      unoptimized
                     />
                   </Link>
                 </div>

@@ -173,13 +173,13 @@ export default function Contact() {
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                        <Image
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
                           src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
                           alt="WhatsApp"
                           width={56}
                           height={56}
                           className="object-contain p-2"
-                          unoptimized
                         />
                       </div>
                       <div className="flex-1">
@@ -195,13 +195,13 @@ export default function Contact() {
                         >
                           <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Contact Page Card">
                             <div className="w-4 h-4 mr-2">
-                              <Image
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img
                                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
                                 alt="WhatsApp"
                                 width={16}
                                 height={16}
                                 className="object-contain"
-                                unoptimized
                               />
                             </div>
                             Abrir WhatsApp
