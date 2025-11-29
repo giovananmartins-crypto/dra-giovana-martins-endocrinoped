@@ -15,9 +15,9 @@ export const Footer = () => {
               <Image
                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-logo.png"
                 alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
-                fill
+                width={224}
+                height={224}
                 className="object-contain"
-                sizes="224px"
               />
             </div>
             <p className="text-card/80 leading-relaxed mb-4">
@@ -70,9 +70,9 @@ export const Footer = () => {
                       <Image
                         src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-facebook.png"
                         alt="Facebook"
-                        fill
+                        width={48}
+                        height={48}
                         className="object-contain"
-                        sizes="48px"
                       />
                     </Link>
                     <span className="text-xs text-card/60 mt-1">Em breve</span>
@@ -87,9 +87,9 @@ export const Footer = () => {
                     <Image
                       src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-intagram.png"
                       alt="Instagram"
-                      fill
+                      width={48}
+                      height={48}
                       className="object-contain"
-                      sizes="48px"
                     />
                   </Link>
                   <Link
@@ -103,9 +103,9 @@ export const Footer = () => {
                     <Image
                       src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
                       alt="WhatsApp"
-                      fill
+                      width={48}
+                      height={48}
                       className="object-contain"
-                      sizes="48px"
                     />
                   </Link>
                   <Link
@@ -119,9 +119,9 @@ export const Footer = () => {
                     <Image
                       src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-doctoralia.png"
                       alt="Doctoralia"
-                      fill
+                      width={48}
+                      height={48}
                       className="object-contain"
-                      sizes="48px"
                     />
                   </Link>
                 </div>

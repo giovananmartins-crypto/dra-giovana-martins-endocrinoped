@@ -176,9 +176,9 @@ export default function Contact() {
                         <Image
                           src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
                           alt="WhatsApp"
-                          fill
+                          width={56}
+                          height={56}
                           className="object-contain p-2"
-                          sizes="56px"
                         />
                       </div>
                       <div className="flex-1">
@@ -197,9 +197,9 @@ export default function Contact() {
                               <Image
                                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-whatsapp.png"
                                 alt="WhatsApp"
-                                fill
+                                width={16}
+                                height={16}
                                 className="object-contain"
-                                sizes="16px"
                               />
                             </div>
                             Abrir WhatsApp

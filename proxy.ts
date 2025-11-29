@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const response = NextResponse.next();
 
   // Headers de Segurança
@@ -61,7 +61,7 @@ export function middleware(request: NextRequest) {
   return response;
 }
 
-// Aplicar middleware em todas as rotas exceto arquivos estáticos
+// Aplicar proxy em todas as rotas exceto arquivos estáticos
 export const config = {
   matcher: [
     /*
