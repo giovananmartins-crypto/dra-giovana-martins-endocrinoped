@@ -54,6 +54,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         datePublished={post.publishedAt.toISOString()}
         dateModified={post.updatedAt?.toISOString()}
         author={post.author.name}
+        category={post.category}
       />
       {post.faqs && post.faqs.length > 0 && <FAQPageSchema faqs={post.faqs} />}
       <WebPageSchema

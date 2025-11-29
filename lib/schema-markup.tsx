@@ -188,7 +188,8 @@ export function ArticleSchema({
   image,
   datePublished,
   dateModified,
-  author = "Dra. Giovana Martins"
+  author = "Dra. Giovana Martins",
+  category
 }: {
   headline: string;
   description: string;
@@ -196,6 +197,7 @@ export function ArticleSchema({
   datePublished: string;
   dateModified?: string;
   author?: string;
+  category?: string;
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -205,6 +207,7 @@ export function ArticleSchema({
     "image": image || "https://www.giovanaendocrinoped.com.br/images/dra-giovana-perfil.jpg",
     "datePublished": datePublished,
     "dateModified": dateModified || datePublished,
+    ...(category && { "articleSection": category }),
     "author": {
       "@type": "Person",
       "name": author,

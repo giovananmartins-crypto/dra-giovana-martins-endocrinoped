@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { MedicalConditionSchema, FAQPageSchema, ReviewSchema, WebPageSchema } from "@/lib/schema-markup";
+import { MedicalConditionSchema, FAQPageSchema, ReviewSchema, WebPageSchema, BreadcrumbSchema } from "@/lib/schema-markup";
 import { generateMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,7 @@ import Image from "next/image";
 import { WhatsAppLink } from "@/components/analytics/WhatsAppLink";
 import { PhoneLink } from "@/components/analytics/PhoneLink";
 import { CTALink } from "@/components/analytics/CTALink";
+import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
 
 export const metadata: Metadata = generateMetadata({
   title: "Puberdade Precoce | Diagnóstico e Tratamento em BH | Dra. Giovana Martins",
@@ -114,10 +115,27 @@ export default function PuberdadePrecocePage() {
         url="/servicos/puberdade-precoce"
         image="https://www.giovanaendocrinoped.com.br/images/servicos/puberdade-precoce-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg"
       />
+      <BreadcrumbSchema
+        items={[
+          { label: "Serviços", href: "/servicos" },
+          { label: "Puberdade Precoce" }
+        ]}
+      />
       <Header />
       <main>
+        {/* Breadcrumbs */}
+        <section className="pt-24 pb-4 bg-card">
+          <div className="container mx-auto px-4">
+            <Breadcrumbs
+              items={[
+                { label: "Serviços", href: "/servicos" },
+                { label: "Puberdade Precoce" }
+              ]}
+            />
+          </div>
+        </section>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-hero">
+        <section className="pt-8 pb-20 bg-gradient-hero">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               <div className="space-y-6">
