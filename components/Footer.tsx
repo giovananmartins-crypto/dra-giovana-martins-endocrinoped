@@ -11,13 +11,13 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-4">
           <div>
-            <div className="relative w-56 h-56 mb-4">
+            <div className="w-56 h-56 mb-4 flex items-center justify-center">
               <Image
                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-logo.png"
                 alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
                 width={224}
                 height={224}
-                className="object-contain"
+                className="object-contain w-full h-full"
               />
             </div>
             <p className="text-card/80 leading-relaxed mb-4">
@@ -63,7 +63,7 @@ export const Footer = () => {
                   <div className="flex flex-col items-center">
                     <Link
                       href="#"
-                      className="w-12 h-12 relative hover:opacity-80 transition-opacity opacity-50 cursor-not-allowed"
+                      className="w-12 h-12 flex items-center justify-center hover:opacity-80 transition-opacity opacity-50 cursor-not-allowed"
                       aria-label="Facebook"
                       onClick={(e) => e.preventDefault()}
                     >
@@ -81,7 +81,7 @@ export const Footer = () => {
                     href="https://www.instagram.com/giovana.endocrinoped/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 relative hover:opacity-80 transition-opacity"
+                    className="w-12 h-12 flex items-center justify-center hover:opacity-80 transition-opacity"
                     aria-label="Instagram"
                   >
                     <Image
@@ -96,7 +96,7 @@ export const Footer = () => {
                     href="https://wa.me/5531995626630"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 relative hover:opacity-80 transition-opacity"
+                    className="w-12 h-12 flex items-center justify-center hover:opacity-80 transition-opacity"
                     aria-label="WhatsApp"
                     onClick={() => analytics.whatsappClick('Footer')}
                   >
@@ -112,7 +112,7 @@ export const Footer = () => {
                     href="https://www.doctoralia.com.br/giovana-neves-martins-4/endocrinologista-pediatrico/betim"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 relative hover:opacity-80 transition-opacity"
+                    className="w-12 h-12 flex items-center justify-center hover:opacity-80 transition-opacity"
                     aria-label="Doctoralia"
                     onClick={() => analytics.doctoraliaClick('Footer')}
                   >

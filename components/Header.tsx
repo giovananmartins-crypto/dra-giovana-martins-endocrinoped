@@ -26,17 +26,17 @@ export const Header = () => {
       <div className="container mx-auto px-4 -py-[2.5px]">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-0">
-            <div className="relative w-24 h-24 md:w-28 md:h-28 flex-shrink-0 -my-3 md:-my-4">
+            <div className="w-24 h-24 md:w-28 md:h-28 flex-shrink-0 -my-3 md:-my-4 flex items-center justify-center">
               <Image
                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-elemento.png"
                 alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
                 width={112}
                 height={112}
-                className="object-contain"
+                className="object-contain w-full h-full"
                 priority
               />
             </div>
-            <div className="hidden md:block relative h-32 mt-4 -mb-6 -ml-[34px]">
+            <div className="hidden md:block h-32 mt-4 -mb-6 -ml-[34px] flex items-center">
               <Image
                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-nome.png"
                 alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
