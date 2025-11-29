@@ -44,7 +44,7 @@ const nextConfig: NextConfig = {
   },
   
   // Otimizações de compilação
-  swcMinify: true,
+  // swcMinify é padrão no Next.js 13+ e não precisa ser especificado
   reactStrictMode: true,
 };
 

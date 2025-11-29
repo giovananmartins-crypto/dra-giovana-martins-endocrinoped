@@ -78,13 +78,13 @@ async function createTables() {
         FROM information_schema.columns 
         WHERE table_name = 'contact_submissions'
         ORDER BY ordinal_position;
-      `;
-      
-      console.log(`\n📋 Colunas da tabela (${columns.length}):`);
-      columns.forEach((col: {
+      ` as Array<{
         column_name: string;
         data_type: string;
-      }) => {
+      }>;
+      
+      console.log(`\n📋 Colunas da tabela (${columns.length}):`);
+      columns.forEach((col) => {
         console.log(`   - ${col.column_name} (${col.data_type})`);
       });
     } else {
@@ -105,7 +105,7 @@ async function createTables() {
       console.log('2. Verifique se a string de conexão está correta');
     }
     
-    if (error.message.includes('connection')) {
+    if (errorMessage.includes('connection')) {
       console.log('\n💡 Erro de conexão:');
       console.log('1. Verifique se o banco está ativo no Neon');
       console.log('2. Verifique sua conexão com a internet');

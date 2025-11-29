@@ -84,7 +84,7 @@ async function testConnection() {
       console.log('3. Verifique sua conexão com a internet');
     }
     
-    if (error.message.includes('SSL')) {
+    if (errorMessage.includes('SSL')) {
       console.log('\n💡 Erro de SSL:');
       console.log('   Adicione ?sslmode=require na string de conexão');
     }

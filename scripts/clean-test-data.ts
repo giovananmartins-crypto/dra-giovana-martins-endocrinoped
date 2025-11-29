@@ -42,14 +42,14 @@ async function cleanTestData() {
       SELECT id, name, email, created_at
       FROM contact_submissions
       ORDER BY created_at DESC
-    `;
-
-    records.forEach((record: {
+    ` as Array<{
       id: number;
       name: string;
       email: string;
       created_at: string;
-    }, index: number) => {
+    }>;
+
+    records.forEach((record, index: number) => {
       console.log(`   ${index + 1}. ID: ${record.id} | ${record.name} (${record.email}) | ${new Date(record.created_at).toLocaleString('pt-BR')}`);
     });
 

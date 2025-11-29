@@ -35,10 +35,7 @@ async function checkRecords() {
         FROM contact_submissions
         ORDER BY created_at DESC
         LIMIT 5
-      `;
-
-      console.log('📋 Últimos registros:\n');
-      records.forEach((record: {
+      ` as Array<{
         id: number;
         name: string;
         email: string;
@@ -46,7 +43,10 @@ async function checkRecords() {
         message: string;
         created_at: string;
         read: boolean;
-      }, index: number) => {
+      }>;
+
+      console.log('📋 Últimos registros:\n');
+      records.forEach((record, index: number) => {
         console.log(`   ${index + 1}. ID: ${record.id}`);
         console.log(`      Nome: ${record.name}`);
         console.log(`      Email: ${record.email}`);
