@@ -44,7 +44,12 @@ async function cleanTestData() {
       ORDER BY created_at DESC
     `;
 
-    records.forEach((record: any, index: number) => {
+    records.forEach((record: {
+      id: number;
+      name: string;
+      email: string;
+      created_at: string;
+    }, index: number) => {
       console.log(`   ${index + 1}. ID: ${record.id} | ${record.name} (${record.email}) | ${new Date(record.created_at).toLocaleString('pt-BR')}`);
     });
 
@@ -56,7 +61,7 @@ async function cleanTestData() {
 
     // Deletar todos os registros
     console.log('🗑️  Removendo registros...');
-    const result = await sql`DELETE FROM contact_submissions`;
+    await sql`DELETE FROM contact_submissions`;
     
     // Contar registros depois
     const countAfter = await sql`SELECT COUNT(*) as count FROM contact_submissions`;
@@ -69,9 +74,13 @@ async function cleanTestData() {
     
     process.exit(0);
 
-  } catch (error: any) {
+  } catch (error) {
     console.error('\n❌ ERRO ao limpar dados:');
-    console.error(error.message);
+    if (error instanceof Error) {
+      console.error(error.message);
+    } else {
+      console.error('Erro desconhecido:', error);
+    }
     process.exit(1);
   }
 }

@@ -92,7 +92,7 @@ export async function POST(request: NextRequest) {
 }
 
 // Método GET para listar contatos (opcional - apenas para admin)
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     // Verificar autenticação (implementar depois)
     // Por enquanto, retornar erro
@@ -100,7 +100,7 @@ export async function GET(request: NextRequest) {
       { message: 'Método não permitido' },
       { status: 405 }
     );
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { message: 'Erro ao buscar contatos' },
       { status: 500 }

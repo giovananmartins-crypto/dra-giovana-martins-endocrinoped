@@ -38,7 +38,15 @@ async function checkRecords() {
       `;
 
       console.log('📋 Últimos registros:\n');
-      records.forEach((record: any, index: number) => {
+      records.forEach((record: {
+        id: number;
+        name: string;
+        email: string;
+        phone: string | null;
+        message: string;
+        created_at: string;
+        read: boolean;
+      }, index: number) => {
         console.log(`   ${index + 1}. ID: ${record.id}`);
         console.log(`      Nome: ${record.name}`);
         console.log(`      Email: ${record.email}`);
@@ -56,9 +64,13 @@ async function checkRecords() {
 
     process.exit(0);
 
-  } catch (error: any) {
+  } catch (error) {
     console.error('❌ ERRO ao verificar registros:');
-    console.error(error.message);
+    if (error instanceof Error) {
+      console.error(error.message);
+    } else {
+      console.error('Erro desconhecido:', error);
+    }
     process.exit(1);
   }
 }

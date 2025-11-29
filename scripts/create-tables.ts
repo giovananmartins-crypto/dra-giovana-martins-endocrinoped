@@ -81,7 +81,10 @@ async function createTables() {
       `;
       
       console.log(`\n📋 Colunas da tabela (${columns.length}):`);
-      columns.forEach((col: any) => {
+      columns.forEach((col: {
+        column_name: string;
+        data_type: string;
+      }) => {
         console.log(`   - ${col.column_name} (${col.data_type})`);
       });
     } else {
@@ -91,11 +94,12 @@ async function createTables() {
     console.log('\n🎉 Todas as tabelas foram criadas com sucesso!');
     process.exit(0);
 
-  } catch (error: any) {
+  } catch (error) {
     console.error('\n❌ ERRO ao criar tabelas:');
-    console.error(error.message);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error(errorMessage);
     
-    if (error.message.includes('DATABASE_URL')) {
+    if (errorMessage.includes('DATABASE_URL')) {
       console.log('\n💡 Possíveis soluções:');
       console.log('1. Verifique se DATABASE_URL está configurado no .env.local');
       console.log('2. Verifique se a string de conexão está correta');

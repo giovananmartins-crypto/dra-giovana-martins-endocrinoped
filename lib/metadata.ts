@@ -25,6 +25,20 @@ export function generateMetadata({
     title,
     description,
     keywords: keywords?.join(", "),
+    authors: [{ name: "Dra. Giovana Martins", url: `${siteUrl}/sobre` }],
+    creator: "Dra. Giovana Martins",
+    publisher: "Dra. Giovana Martins - Endocrinologista Pediátrica",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
     openGraph: {
       type: "website",
       url: fullUrl,

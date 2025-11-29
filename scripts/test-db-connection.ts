@@ -72,11 +72,12 @@ async function testConnection() {
     console.log('\n🎉 Todos os testes passaram! Conexão funcionando perfeitamente.');
     process.exit(0);
 
-  } catch (error: any) {
+  } catch (error) {
     console.error('\n❌ ERRO ao conectar com o banco de dados:');
-    console.error(error.message);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error(errorMessage);
     
-    if (error.message.includes('connection')) {
+    if (errorMessage.includes('connection')) {
       console.log('\n💡 Possíveis soluções:');
       console.log('1. Verifique se a string de conexão está correta');
       console.log('2. Verifique se o banco está ativo no Neon (pode ter pausado)');

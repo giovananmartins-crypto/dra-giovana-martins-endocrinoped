@@ -23,8 +23,22 @@ export function LocalBusinessSchema() {
       "latitude": -19.9300,
       "longitude": -43.9500
     },
-    "openingHours": "Mo,Tu,We,Th,Fr 08:00-18:00",
-    "priceRange": "$$$"
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "priceRange": "$$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "29",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
   };
 
   return (
@@ -193,15 +207,27 @@ export function ArticleSchema({
     "dateModified": dateModified || datePublished,
     "author": {
       "@type": "Person",
-      "name": author
+      "name": author,
+      "url": "https://www.giovanaendocrinoped.com.br/sobre",
+      "jobTitle": "Endocrinologista Pediátrica",
+      "sameAs": [
+        "https://www.instagram.com/giovana.endocrinoped/",
+        "https://www.doctoralia.com.br/giovana-neves-martins-4/endocrinologista-pediatrico/betim",
+        "https://www.linkedin.com/in/giovanaendocrinoped"
+      ]
     },
     "publisher": {
       "@type": "Organization",
       "name": "Dra. Giovana Martins - Endocrinologista Pediátrica",
+      "url": "https://www.giovanaendocrinoped.com.br",
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.giovanaendocrinoped.com.br/images/logo.png"
       }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.giovanaendocrinoped.com.br"
     }
   };
 
@@ -256,6 +282,12 @@ export function ReviewSchema({
   const schema = {
     "@context": "https://schema.org",
     "@type": "Review",
+    "itemReviewed": {
+      "@type": "Physician",
+      "name": "Dra. Giovana Martins",
+      "medicalSpecialty": "Endocrinologia Pediátrica",
+      "url": "https://www.giovanaendocrinoped.com.br"
+    },
     "author": {
       "@type": "Person",
       "name": author

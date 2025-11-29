@@ -46,8 +46,9 @@ async function testInvalidData() {
       } else {
         console.log('   ⚠️  Esperava status 400, mas recebeu', response.status);
       }
-    } catch (error: any) {
-      console.error('   ❌ Erro:', error.message);
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      console.error('   ❌ Erro:', errorMessage);
     }
   }
 }

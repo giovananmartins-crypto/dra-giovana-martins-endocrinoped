@@ -2,8 +2,11 @@
 ## Site Dra. Giovana Martins - Endocrinologista Pediátrica
 
 **Data da Auditoria:** 27/01/2025  
-**Versão:** 1.0  
+**Versão:** 1.1  
 **Status:** ✅ SEGURO
+
+**🌐 DOMÍNIO:** `giovanaendocrinoped.com.br` ✅ **CONFIGURADO E NO AR**  
+**🌐 URL:** https://www.giovanaendocrinoped.com.br ✅ **ONLINE**
 
 ---
 

@@ -56,9 +56,10 @@ async function testContactAPI() {
 
     process.exit(response.ok && data.success ? 0 : 1);
 
-  } catch (error: any) {
+  } catch (error) {
     console.error('❌ ERRO ao testar API:');
-    console.error('   Mensagem:', error.message);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error('   Mensagem:', errorMessage);
     console.log('');
     console.log('💡 Possíveis causas:');
     console.log('   1. Servidor não está rodando (npm run dev)');

@@ -1,5 +1,7 @@
 # 📋 RESUMO DE ATUALIZAÇÕES - 27/01/2025
 
+**🌐 SITE NO AR:** https://www.giovanaendocrinoped.com.br ✅ **ONLINE**
+
 ## ✅ ATUALIZAÇÕES REALIZADAS
 
 ### 1. **Google Services - 100% Configurado**
@@ -154,21 +156,29 @@
 
 ## 🎯 PRÓXIMOS PASSOS
 
+### ✅ CONCLUÍDO RECENTEMENTE
+
+1. **Domínio e Hosting** ✅ **CONCLUÍDO**
+   - ✅ Domínio configurado na Vercel
+   - ✅ DNS configurado
+   - ✅ SSL emitido e funcionando
+   - ✅ Site no ar: https://www.giovanaendocrinoped.com.br
+
+2. **Backend e Integrações** ✅ **CONCLUÍDO**
+   - ✅ Banco de dados PostgreSQL (Neon)
+   - ✅ Sistema de email (Resend)
+   - ✅ API routes funcionando
+   - ✅ Formulário de contato conectado
+
+3. **Testes de Rastreamento** ✅ **CONCLUÍDO**
+   - ✅ GTM Preview Mode testado
+   - ✅ Eventos verificados no GA4
+   - ✅ Conversões configuradas no Google Ads
+
 ### Prioridade ALTA
 1. **Continuar Artigos do Blog** (Fase 6 - Fevereiro)
    - 12 artigos planejados para fevereiro
    - Seguir calendário editorial
-
-2. **Testes de Rastreamento**
-   - Testar GTM Preview Mode
-   - Verificar eventos no GA4 (Tempo real)
-   - Verificar conversões no Google Ads
-
-### Prioridade MÉDIA
-3. **Backend e Integrações**
-   - Banco de dados (formulário de contato)
-   - Sistema de email
-   - API routes
 
 ### Prioridade BAIXA
 4. **Otimizações Finais**

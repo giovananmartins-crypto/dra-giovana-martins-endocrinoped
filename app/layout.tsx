@@ -18,6 +18,38 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Dra. Giovana Martins - Endocrinologia Pediátrica",
   description: "Cuidado especializado em endocrinologia pediátrica em Belo Horizonte. Transformamos a jornada de saúde endócrina de crianças e adolescentes.",
+  keywords: [
+    "endocrinologista pediátrica",
+    "endocrinologista infantil BH",
+    "endocrinologista Belo Horizonte",
+    "puberdade precoce",
+    "diabetes infantil",
+    "baixa estatura",
+    "crescimento infantil"
+  ],
+  authors: [{ name: "Dra. Giovana Martins", url: "https://www.giovanaendocrinoped.com.br/sobre" }],
+  creator: "Dra. Giovana Martins",
+  publisher: "Dra. Giovana Martins - Endocrinologista Pediátrica",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#1a1a1a' },
+  ],
   icons: {
     icon: [
       {

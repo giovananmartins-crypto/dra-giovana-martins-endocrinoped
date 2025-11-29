@@ -2,9 +2,12 @@
 ## Site Dra. Giovana Martins - Endocrinologista Pediátrica
 
 **Data de Criação:** 27/01/2025  
-**Versão:** 2.0  
-**Status:** Fase 4 Concluída - Pronto para Testes  
+**Versão:** 2.1  
+**Status:** ✅ 100% Configurado e em Produção  
 **Última Atualização:** 27/01/2025
+
+**🌐 DOMÍNIO:** `giovanaendocrinoped.com.br` ✅ **CONFIGURADO E NO AR**  
+**🌐 URL:** https://www.giovanaendocrinoped.com.br ✅ **ONLINE**
 
 ---
 
@@ -40,14 +43,16 @@
   - `lib/analytics.ts` criado com funções prontas
   - Funções: `whatsappClick()`, `phoneCall()`, `formSubmit()`, `doctoraliaClick()`, `ctaClick()`
 
-- ✅ **GTM Configurado e Publicado** (26/11/2025)
+- ✅ **GTM Configurado e Publicado** (27/01/2025)
   - 3 variáveis criadas (Event Category, Event Label, Event Value)
   - Tag GA4 Configuration configurada (`G-184NEKF906`)
   - Tag Google Ads - Tag do Google configurada (`AW-17761516445`)
+  - Tag Google Ads - Vinculador de Conversões configurada (`AW-17761516445`) ✅ **PUBLICADA**
   - 5 acionadores criados (WhatsApp, Phone, Form, Doctoralia, CTA)
   - 5 tags GA4 Events criadas
   - 4 tags Google Ads Conversions criadas
-  - Container publicado (Versão 2)
+  - Container publicado (Versão 3 - 27/01/2025)
+  - ✅ Qualidade do Contêiner: Resolvida (aviso "Urgente" removido)
 
 - ✅ **Rastreamento Implementado no Código** (27/01/2025)
   - Componentes de analytics criados (WhatsAppLink, PhoneLink, DoctoraliaLink, CTALink)
@@ -587,6 +592,69 @@ O Google Ads pode forçar você a completar o onboarding primeiro. Se isso acont
 
 ---
 
+**⚠️ IMPORTANTE: Criar Vinculador de Conversões (Conversion Linker)**
+
+**Tag 0.5: Google Ads - Vinculador de Conversões**
+
+**✅ DIFERENÇA ENTRE AS TAGS (NÃO SÃO DUPLICADAS):**
+
+1. **"Google Ads - Tag do Google"** (já criada ontem):
+   - Tipo: "Tag do Google"
+   - Função: Configuração base do Google Ads
+   - Acionador: "Initialization - All Pages"
+   - **MANTÉM ESTA TAG!**
+
+2. **"Google Ads - Vinculador de Conversões"** (criar agora):
+   - Tipo: "Vinculador de conversões"
+   - Função: Melhora medição de cliques nos anúncios
+   - Acionador: "All Pages" (ou "Initialization - All Pages")
+   - **É DIFERENTE E COMPLEMENTAR!**
+
+**⚠️ NÃO SÃO DUPLICADAS!** São duas tags diferentes que trabalham juntas:
+- A "Tag do Google" configura a conta
+- O "Vinculador" melhora a medição de cliques
+
+**Por que é importante?**
+- Melhora a medição de cliques nos anúncios do Google Ads
+- Conecta melhor os cliques com as conversões
+- Recomendado pelo Google para melhor precisão
+- Resolve o aviso "Urgente" no diagnóstico do GTM
+
+**Como fazer (PASSO A PASSO DETALHADO):**
+
+1. **Ir em "Tags"** > Clicar em "Novo"
+2. **Escolher tipo:** "Vinculador de conversões" (ou "Google Ads: Conversion Linker")
+   - Procurar na lista de tipos de tag
+   - Deve aparecer com logo do Google
+
+3. **Configurar a tag:**
+
+   **a) Nome da tag:**
+   - No topo, onde está "Tag sem título", clicar e alterar para:
+   - **Nome:** `Google Ads - Vinculador de Conversões`
+
+   **b) Configuração da tag:**
+   - Tipo já está selecionado: "Vinculador de conversões"
+   - **Não precisa preencher nada aqui** (diz "Não é necessário configurar")
+   - **Checkboxes:** Deixar todos **DESMARCADOS** (não precisa marcar nenhum)
+     - ❌ "Ativar a vinculação em todos os URLs de páginas" - **DESMARCAR**
+     - ❌ "Ativar a vinculação entre domínios" - **DESMARCAR**
+     - ❌ "Modificar as configurações de cookies (avançado)" - **DESMARCAR**
+
+   **c) Acionamento (IMPORTANTE):**
+   - Na seção "Acionamento", clicar em "Escolha um acionador..."
+   - **Clicar em "Initialization - All Pages"** (ou "All Pages")
+   - Se não aparecer, clicar em "Acionadores incorporados" e escolher "All Pages"
+
+4. **Salvar:**
+   - Clicar no botão azul **"Salvar"** no topo direito
+
+**✅ Resultado:** O Vinculador de Conversões está configurado e vai melhorar a medição de cliques nos anúncios.
+
+**⚠️ NOTA:** Esta tag deve ser criada **ANTES** das tags de conversão específicas, mas pode ser criada junto com a "Tag do Google".
+
+---
+
 **Tag 1: Google Ads - Ligação Site**
 
 1. **Ir em "Tags"** > Clicar em "Novo"
@@ -702,16 +770,28 @@ O Google Ads pode forçar você a completar o onboarding primeiro. Se isso acont
 - ✅ 3 variáveis criadas (Event Category, Event Label, Event Value)
 - ✅ 5 variáveis incorporadas (Event, Page Hostname, Page Path, Page URL, Referrer)
 - ✅ 1 tag GA4 Configuration (`G-184NEKF906`)
-- ✅ 1 tag Google Ads - Tag do Google (`AW-17761516445`)
+- ✅ 1 tag Google Ads - Tag do Google (`AW-17761516445`) - **TAG BASE**
+- ✅ 1 tag Google Ads - Vinculador de Conversões (`AW-17761516445`) - **TAG COMPLEMENTAR** ✅ **PUBLICADA** (27/01/2025)
 - ✅ 5 acionadores (WhatsApp Click, Phone Call, Form Submit, Doctoralia Click, CTA Click)
 - ✅ 5 tags GA4 Events (WhatsApp, Phone, Form, Doctoralia, CTA)
 - ✅ 4 tags Google Ads Conversions (Ligação Site, WhatsApp, Form Submit, Ligação Anúncios)
-- ✅ Container publicado (Versão 2 - 26/11/2025)
+- ✅ Container publicado (Versão 3 - 27/01/2025)
+
+**✅ VERIFICAÇÃO DE DUPLICAÇÃO:**
+- ✅ "Google Ads - Tag do Google" (Tipo: Tag do Google) - **CORRETO, MANTÉM**
+- ✅ "Google Ads - Vinculador de Conversões" (Tipo: Vinculador de conversões) - **CORRETO, É DIFERENTE**
+- ✅ **NÃO HÁ DUPLICAÇÃO** - São tags complementares que trabalham juntas
+- ✅ **Qualidade do Contêiner:** Resolvida (aviso "Urgente" removido)
 
 **Total publicado:**
-- 11 Tags
-- 5 Acionadores
-- 8 Variáveis (3 criadas + 5 incorporadas)
+- ✅ 12 Tags (1 GA4 Config, 1 Google Ads Tag, 1 Vinculador, 5 GA4 Events, 4 Google Ads Conversions)
+- ✅ 5 Acionadores
+- ✅ 8 Variáveis (3 criadas + 5 incorporadas)
+
+**✅ CONCLUÍDO:**
+- ✅ Tag "Google Ads - Vinculador de Conversões" adicionada e publicada (27/01/2025)
+- ✅ Qualidade do Contêiner melhorada (aviso "Urgente" resolvido)
+- ✅ Medição de cliques nos anúncios do Google Ads otimizada
 
 **Próximo passo:** ✅ FASE 4 - CONCLUÍDA (27/01/2025)
 
@@ -1074,6 +1154,7 @@ import { CTALink } from "@/components/analytics/CTALink";
 - [x] Criar variáveis (Event Category, Event Label, Event Value) ✅ **CONCLUÍDO**
 - [x] Configurar tag GA4 Configuration ✅ **CONCLUÍDO**
 - [x] Criar tag Google Ads - Tag do Google (configuração base) ✅ **CONCLUÍDO**
+- [x] Criar tag Google Ads - Vinculador de Conversões ✅ **CONCLUÍDO** (27/01/2025)
 - [x] Criar acionadores (WhatsApp, Phone, Form, Doctoralia, CTA) ✅ **CONCLUÍDO**
 - [x] Criar tags de eventos GA4 (WhatsApp, Phone, Form, Doctoralia, CTA) ✅ **CONCLUÍDO**
 - [x] Criar tags de conversão Google Ads (Ligação Site, WhatsApp, Form Submit, Ligação Anúncios) ✅ **CONCLUÍDO**
