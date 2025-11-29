@@ -180,6 +180,7 @@ export default function Contact() {
                           width={56}
                           height={56}
                           className="object-contain p-2"
+                          suppressHydrationWarning
                         />
                       </div>
                       <div className="flex-1">
@@ -202,6 +203,7 @@ export default function Contact() {
                                 width={16}
                                 height={16}
                                 className="object-contain"
+                                suppressHydrationWarning
                               />
                             </div>
                             Abrir WhatsApp

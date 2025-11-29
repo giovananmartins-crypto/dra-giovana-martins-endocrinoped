@@ -71,6 +71,8 @@ const nextConfig: NextConfig = {
         hostname: 'www.giovanaendocrinoped.com.br',
       },
     ],
+    // Desabilitar otimização automática para tags img nativas
+    unoptimized: false, // Mantém false para usar Image component quando necessário
   },
   
   // Otimizações de compilação

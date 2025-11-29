@@ -35,6 +35,7 @@ export const Header = () => {
                 height={112}
                 className="object-contain w-full h-full"
                 loading="eager"
+                suppressHydrationWarning
               />
             </div>
             <div className="hidden md:block h-32 mt-4 -mb-6 -ml-[34px]">
@@ -46,6 +47,7 @@ export const Header = () => {
                 height={128}
                 className="object-contain object-left h-full w-auto"
                 loading="eager"
+                suppressHydrationWarning
               />
             </div>
             <div className="md:hidden h-6">
@@ -57,6 +59,7 @@ export const Header = () => {
                 height={24}
                 className="object-contain object-left h-full w-auto"
                 loading="eager"
+                suppressHydrationWarning
               />
             </div>
           </Link>
