@@ -44,6 +44,9 @@ next-env.d.ts
 /docs
 ROTAS_DO_SITE.md
 
+# backup files from image optimization
+*.backup
+
 # README files (ignore all except root)
 **/README.md
 !README.md
