@@ -1,16 +1,16 @@
 # Browsers que queremos suportar
 # Foca em navegadores modernos para reduzir polyfills
 
-# Navegadores com suporte a ES2020+
+# Navegadores com suporte a ES2022+ (reduz polyfills)
 > 0.5%
 last 2 versions
 Firefox ESR
 not dead
 not op_mini all
 
-# Suporte mínimo para ES2020 features
-Chrome >= 80
-Firefox >= 74
-Safari >= 13.1
-Edge >= 80
+# Suporte mínimo para ES2022 features (reduz polyfills como Array.at, Object.hasOwn)
+Chrome >= 92
+Firefox >= 90
+Safari >= 15.4
+Edge >= 92
 

@@ -45,10 +45,10 @@
     "Firefox ESR",
     "not dead",
     "not op_mini all",
-    "Chrome >= 80",
-    "Firefox >= 74",
-    "Safari >= 13.1",
-    "Edge >= 80"
+    "Chrome >= 92",
+    "Firefox >= 90",
+    "Safari >= 15.4",
+    "Edge >= 92"
   ],
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

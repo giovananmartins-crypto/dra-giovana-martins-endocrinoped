@@ -92,25 +92,16 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {/* Performance Links - Preconnect para GTM (script inline para garantir detecção) */}
+        {/* Performance Links - Preconnect para GTM (múltiplas estratégias para garantir detecção) */}
         {/* IMPORTANTE: Apenas GTM - ele gerencia GA4 e Google Ads internamente */}
+        {/* Estratégia 1: Links estáticos no head (mais confiável para PageSpeed) */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        {/* Script inline para garantir que preconnect seja detectado pelo PageSpeed */}
+        {/* Estratégia 2: Script inline síncrono que executa imediatamente */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function() {
-                var preconnect = document.createElement('link');
-                preconnect.rel = 'preconnect';
-                preconnect.href = 'https://www.googletagmanager.com';
-                preconnect.crossOrigin = 'anonymous';
-                var dnsPrefetch = document.createElement('link');
-                dnsPrefetch.rel = 'dns-prefetch';
-                dnsPrefetch.href = 'https://www.googletagmanager.com';
-                document.head.insertBefore(preconnect, document.head.firstChild);
-                document.head.insertBefore(dnsPrefetch, document.head.firstChild);
-              })();
+              !function(){var e=document.createElement("link");e.rel="preconnect",e.href="https://www.googletagmanager.com",e.crossOrigin="anonymous";var t=document.createElement("link");t.rel="dns-prefetch",t.href="https://www.googletagmanager.com";var n=document.getElementsByTagName("head")[0];n.insertBefore(e,n.firstChild),n.insertBefore(t,n.firstChild)}();
             `,
           }}
         />
