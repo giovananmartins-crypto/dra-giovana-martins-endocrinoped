@@ -104,6 +104,31 @@ export default function RootLayout({
           as="image"
           fetchPriority="high"
         />
+        {/* CSS crítico inline para hero - reduz bloqueio de renderização */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* CSS crítico para hero - renderiza imediatamente */
+            #inicio { padding-top: 11rem; padding-bottom: 5rem; }
+            .bg-gradient-hero { background-image: linear-gradient(135deg, hsl(357 70% 90%) 0%, hsl(204 63% 91%) 100%); }
+            .container { margin-left: auto; margin-right: auto; max-width: 1400px; }
+            .px-4 { padding-left: 1rem; padding-right: 1rem; }
+            .grid { display: grid; }
+            .md\\:grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            @media (min-width: 768px) { .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+            .gap-12 { gap: 3rem; }
+            .items-center { align-items: center; }
+            .space-y-6 > * + * { margin-top: 1.5rem; }
+            .text-center { text-align: center; }
+            .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .md\\:text-5xl { font-size: 3rem; line-height: 1; }
+            @media (min-width: 768px) { .md\\:text-5xl { font-size: 3rem; line-height: 1; } }
+            .lg\\:text-6xl { font-size: 3.75rem; line-height: 1; }
+            @media (min-width: 1024px) { .lg\\:text-6xl { font-size: 3.75rem; line-height: 1; } }
+            .font-bold { font-weight: 700; }
+            .text-foreground { color: hsl(0 0% 15%); }
+            .leading-tight { line-height: 1.25; }
+          `
+        }} />
         {/* Estratégia 2: Script inline síncrono que executa imediatamente */}
         <script
           dangerouslySetInnerHTML={{

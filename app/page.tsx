@@ -1,3 +1,4 @@
+import { HeroSectionCritical } from "@/components/sections/HeroSectionCritical";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { PillarsSection } from "@/components/sections/PillarsSection";
 import { Header, Footer } from "@/components/ClientHeaderFooter";
@@ -112,6 +113,9 @@ export default function Home() {
       ))}
       <Header />
       <main>
+        {/* Hero crítico renderiza H1 imediatamente (server component) */}
+        <HeroSectionCritical />
+        {/* Hero interativo carrega após (client component) */}
         <HeroSection />
         <PillarsSection />
         <ServicesSection />
