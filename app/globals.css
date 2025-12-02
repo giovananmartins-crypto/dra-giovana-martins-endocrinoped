@@ -211,6 +211,12 @@ body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-geist-sans), 'Inter', Arial, Helvetica, sans-serif;
+  /* Otimização de fontes: reduz CLS */
+  font-display: swap;
+  /* Previne layout shift durante carregamento de fontes */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {

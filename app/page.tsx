@@ -1,15 +1,36 @@
 import { HeroSection } from "@/components/sections/HeroSection";
 import { PillarsSection } from "@/components/sections/PillarsSection";
-import { ServicesSection } from "@/components/sections/ServicesSection";
-import { AboutSection } from "@/components/sections/AboutSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
-import { FAQSection } from "@/components/sections/FAQSection";
-import { BlogPreviewSection } from "@/components/sections/BlogPreviewSection";
-import { CTASection } from "@/components/sections/CTASection";
 import { Header, Footer } from "@/components/ClientHeaderFooter";
 import { LocalBusinessSchema, PhysicianSchema, PersonSchema, FAQPageSchema, ReviewSchema } from "@/lib/schema-markup";
 import { generateMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+
+// Code splitting: componentes abaixo do fold carregam lazy
+// Isso reduz o JavaScript inicial e melhora LCP/TBT
+const ServicesSection = dynamic(() => import("@/components/sections/ServicesSection").then(mod => ({ default: mod.ServicesSection })), {
+  loading: () => <div className="py-20"><div className="container mx-auto px-4"><div className="animate-pulse h-64 bg-muted rounded"></div></div></div>,
+});
+
+const AboutSection = dynamic(() => import("@/components/sections/AboutSection").then(mod => ({ default: mod.AboutSection })), {
+  loading: () => <div className="py-20"><div className="container mx-auto px-4"><div className="animate-pulse h-64 bg-muted rounded"></div></div></div>,
+});
+
+const TestimonialsSection = dynamic(() => import("@/components/sections/TestimonialsSection").then(mod => ({ default: mod.TestimonialsSection })), {
+  loading: () => <div className="py-20"><div className="container mx-auto px-4"><div className="animate-pulse h-64 bg-muted rounded"></div></div></div>,
+});
+
+const FAQSection = dynamic(() => import("@/components/sections/FAQSection").then(mod => ({ default: mod.FAQSection })), {
+  loading: () => <div className="py-20"><div className="container mx-auto px-4"><div className="animate-pulse h-64 bg-muted rounded"></div></div></div>,
+});
+
+const BlogPreviewSection = dynamic(() => import("@/components/sections/BlogPreviewSection").then(mod => ({ default: mod.BlogPreviewSection })), {
+  loading: () => <div className="py-20"><div className="container mx-auto px-4"><div className="animate-pulse h-64 bg-muted rounded"></div></div></div>,
+});
+
+const CTASection = dynamic(() => import("@/components/sections/CTASection").then(mod => ({ default: mod.CTASection })), {
+  loading: () => <div className="py-20"><div className="container mx-auto px-4"><div className="animate-pulse h-32 bg-muted rounded"></div></div></div>,
+});
 
 export const metadata: Metadata = generateMetadata({
   title: "Dra. Giovana Martins | Endocrinologista Pediátrica BH | Agende Consulta",

@@ -1,16 +1,19 @@
 # Browsers que queremos suportar
-# Foca em navegadores modernos para reduzir polyfills
+# Foca em navegadores modernos para reduzir polyfills ao máximo
 
-# Navegadores com suporte a ES2022+ (reduz polyfills)
+# Suporte mínimo para ES2022 features (reduz polyfills como Array.at, Object.hasOwn, String.trimStart/trimEnd)
+# Essas versões suportam nativamente:
+# - Array.prototype.at (Chrome 92+, Firefox 90+, Safari 15.4+, Edge 92+)
+# - Object.hasOwn (Chrome 93+, Firefox 92+, Safari 15.4+, Edge 93+)
+# - String.prototype.trimStart/trimEnd (Chrome 66+, Firefox 61+, Safari 12+, Edge 79+)
+Chrome >= 93
+Firefox >= 92
+Safari >= 15.4
+Edge >= 93
+
+# Fallback para navegadores mais antigos (mas ainda modernos)
 > 0.5%
 last 2 versions
-Firefox ESR
 not dead
 not op_mini all
-
-# Suporte mínimo para ES2022 features (reduz polyfills como Array.at, Object.hasOwn)
-Chrome >= 92
-Firefox >= 90
-Safari >= 15.4
-Edge >= 92
 

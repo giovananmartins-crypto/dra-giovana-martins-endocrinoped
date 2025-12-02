@@ -91,8 +91,20 @@ const nextConfig: NextConfig = {
   experimental: {
     // Otimizações de CSS
     optimizeCss: true,
-    // Otimizações de bundle
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-slot', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
+    // Otimizações de bundle - reduz JavaScript não usado
+    optimizePackageImports: [
+      'lucide-react', 
+      '@radix-ui/react-slot', 
+      '@radix-ui/react-toast', 
+      '@radix-ui/react-tooltip',
+      'date-fns', // Otimiza imports de date-fns
+      'zod', // Otimiza imports de zod
+    ],
+  },
+  
+  // Turbopack config (Next.js 16+ usa Turbopack por padrão)
+  turbopack: {
+    // Turbopack já otimiza automaticamente, mas podemos configurar se necessário
   },
 };
 
