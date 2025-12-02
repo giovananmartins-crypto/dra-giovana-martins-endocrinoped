@@ -16,14 +16,14 @@ const sizeClasses = {
 
 const colorVariants = {
   default: "bg-muted/30 text-muted-foreground border-border",
-  primary: "bg-primary/10 text-primary border-primary/20 hover:bg-primary/15",
+  primary: "bg-primary/20 text-link border-primary/30 hover:bg-primary/25",
   info: "bg-info/10 text-info border-info/20 hover:bg-info/15",
   accent: "bg-accent/10 text-accent border-accent/20 hover:bg-accent/15",
   secondary: "bg-secondary/10 text-secondary border-secondary/20 hover:bg-secondary/15",
 };
 
 const autoColors = [
-  "bg-primary/10 text-primary border-primary/20 hover:bg-primary/15",
+  "bg-primary/20 text-link border-primary/30 hover:bg-primary/25",
   "bg-info/10 text-info border-info/20 hover:bg-info/15",
   "bg-accent/10 text-accent border-accent/20 hover:bg-accent/15",
   "bg-secondary/10 text-secondary border-secondary/20 hover:bg-secondary/15",

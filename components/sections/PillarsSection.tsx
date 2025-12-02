@@ -73,22 +73,22 @@ export const PillarsSection = () => {
                     {pillar.description}
                   </p>
                   {pillar.title === "Confiança" && (
-                    <Link href="/sobre" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                    <Link href="/sobre" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                       Saiba mais sobre nossa formação →
                     </Link>
                   )}
                   {pillar.title === "Acolhimento" && (
-                    <Link href="/contato" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                    <Link href="/contato" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                       Agende uma consulta →
                     </Link>
                   )}
                   {pillar.title === "Excelência Pediátrica" && (
-                    <Link href="/servicos" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                    <Link href="/servicos" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                       Conheça nossos serviços →
                     </Link>
                   )}
                   {pillar.title === "Inovação" && (
-                    <Link href="/blog" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                    <Link href="/blog" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                       Leia nossos artigos →
                     </Link>
                   )}

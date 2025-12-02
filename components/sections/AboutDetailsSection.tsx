@@ -95,7 +95,7 @@ export const AboutDetailsSection = () => {
                     a graduação, desenvolveu interesse especial pela pediatria e endocrinologia.
                   </p>
                   <div className="mt-4">
-                    <Link href="/servicos" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                    <Link href="/servicos" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                       Conheça nossos serviços especializados →
                     </Link>
                   </div>
@@ -113,7 +113,7 @@ export const AboutDetailsSection = () => {
                     desenvolvendo habilidades essenciais para o atendimento pediátrico.
                   </p>
                   <div className="mt-4">
-                    <Link href="/blog" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                    <Link href="/blog" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                       Leia artigos sobre saúde infantil →
                     </Link>
                   </div>
@@ -130,16 +130,16 @@ export const AboutDetailsSection = () => {
                     com foco em distúrbios do crescimento, puberdade, diabetes infantil e distúrbios da tireoide.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
-                    <Link href="/servicos/baixa-estatura" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                    <Link href="/servicos/baixa-estatura" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                       Baixa Estatura →
                     </Link>
-                    <Link href="/servicos/puberdade-precoce" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                    <Link href="/servicos/puberdade-precoce" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                       Puberdade Precoce →
                     </Link>
-                    <Link href="/servicos/diabetes-infantil" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                    <Link href="/servicos/diabetes-infantil" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                       Diabetes Infantil →
                     </Link>
-                    <Link href="/servicos/disturbios-tireoide" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                    <Link href="/servicos/disturbios-tireoide" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                       Distúrbios da Tireoide →
                     </Link>
                   </div>
@@ -205,10 +205,10 @@ export const AboutDetailsSection = () => {
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Sua prática clínica abrange o diagnóstico e tratamento de diversas condições 
-                  endócrinas, incluindo <Link href="/servicos/baixa-estatura" className="text-primary/90 hover:text-primary hover:underline font-semibold">distúrbios do crescimento</Link>, 
-                  <Link href="/servicos/puberdade-precoce" className="text-primary/90 hover:text-primary hover:underline font-semibold"> puberdade precoce e atrasada</Link>, 
-                  <Link href="/servicos/diabetes-infantil" className="text-primary/90 hover:text-primary hover:underline font-semibold"> diabetes tipo 1 e 2</Link>, 
-                  <Link href="/servicos/disturbios-tireoide" className="text-primary/90 hover:text-primary hover:underline font-semibold"> distúrbios da tireoide</Link>, 
+                  endócrinas, incluindo <Link href="/servicos/baixa-estatura" className="text-link hover:text-link-hover hover:underline font-semibold">distúrbios do crescimento</Link>, 
+                  <Link href="/servicos/puberdade-precoce" className="text-link hover:text-link-hover hover:underline font-semibold"> puberdade precoce e atrasada</Link>, 
+                  <Link href="/servicos/diabetes-infantil" className="text-link hover:text-link-hover hover:underline font-semibold"> diabetes tipo 1 e 2</Link>, 
+                  <Link href="/servicos/disturbios-tireoide" className="text-link hover:text-link-hover hover:underline font-semibold"> distúrbios da tireoide</Link>, 
                   obesidade infantil e outras condições relacionadas ao sistema endócrino.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
@@ -217,13 +217,13 @@ export const AboutDetailsSection = () => {
                   bem-estar integral da criança e sua família.
                 </p>
                 <div className="mt-4 pt-4 border-t border-border flex flex-wrap gap-3">
-                  <Link href="/servicos" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                  <Link href="/servicos" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                     Ver todos os serviços →
                   </Link>
-                  <Link href="/contato" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                  <Link href="/contato" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                     Agendar consulta →
                   </Link>
-                  <Link href="/blog" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                  <Link href="/blog" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                     Ler artigos sobre saúde →
                   </Link>
                 </div>
@@ -275,7 +275,7 @@ export const AboutDetailsSection = () => {
                     tratamento e evolução de forma clara e compreensível.
                   </p>
                   <div className="mt-4">
-                    <Link href="/blog" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                    <Link href="/blog" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                       Acesse nosso blog educativo →
                     </Link>
                   </div>
@@ -293,7 +293,7 @@ export const AboutDetailsSection = () => {
                     necessário em todas as etapas do tratamento.
                   </p>
                   <div className="mt-4">
-                    <Link href="/contato" className="text-sm text-primary/90 hover:text-primary hover:underline font-semibold inline-flex items-center gap-1">
+                    <Link href="/contato" className="text-sm text-link hover:text-link-hover hover:underline font-semibold inline-flex items-center gap-1">
                       Entre em contato para agendar →
                     </Link>
                   </div>

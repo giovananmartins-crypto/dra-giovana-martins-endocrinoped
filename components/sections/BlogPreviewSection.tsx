@@ -51,7 +51,7 @@ export const BlogPreviewSection = () => {
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Calendar className="h-4 w-4" />
                   <span>{post.date}</span>
-                  <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">
+                  <span className="px-2 py-1 bg-primary/20 text-link rounded-full text-xs font-semibold">
                     {post.category}
                   </span>
                 </div>

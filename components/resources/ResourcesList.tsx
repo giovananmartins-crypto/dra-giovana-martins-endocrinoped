@@ -127,7 +127,7 @@ export function ResourcesList({ resources }: ResourcesListProps) {
                   </div>
                   
                   <CardContent className="p-6 space-y-4 flex flex-col h-full">
-                    <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold w-fit">
+                    <div className="inline-block px-3 py-1 bg-primary/20 text-link rounded-full text-xs font-semibold w-fit">
                       {resource.category}
                     </div>
                     

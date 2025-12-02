@@ -34,6 +34,10 @@
   --color-input: hsl(357 70% 85%);
   --color-ring: hsl(357 70% 70%);
   
+  /* Cor para links com melhor contraste (WCAG AA) */
+  --color-link: hsl(357 65% 45%);
+  --color-link-hover: hsl(357 70% 40%);
+  
   /* Sidebar colors - Light Mode */
   --color-sidebar: hsl(0 0% 98%);
   --color-sidebar-foreground: hsl(240 5.3% 26.1%);
@@ -108,6 +112,10 @@
   --color-border: hsl(0 0% 20%);
   --color-input: hsl(0 0% 20%);
   --color-ring: hsl(357 60% 65%);
+  
+  /* Cor para links com melhor contraste (WCAG AA) - Dark Mode */
+  --color-link: hsl(357 70% 75%);
+  --color-link-hover: hsl(357 75% 80%);
   
   /* Sidebar colors - Dark Mode */
   --color-sidebar: hsl(240 5.9% 10%);
@@ -253,6 +261,15 @@ html {
 
 .animate-accordion-down {
   animation: accordion-down 0.2s ease-out;
+}
+
+/* Classe para links com melhor contraste */
+.text-link {
+  color: var(--color-link);
+}
+
+.text-link:hover {
+  color: var(--color-link-hover);
 }
 
 .animate-accordion-up {
