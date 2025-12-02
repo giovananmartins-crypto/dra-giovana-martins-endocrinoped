@@ -33,24 +33,24 @@ export const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Links Rápidos</h3>
             <ul className="space-y-2 text-card/80">
               <li>
-                <a href="#inicio" className="hover:text-card transition-colors">
-                  Início
+                <a href="#inicio" className="hover:text-card transition-colors" aria-label="Voltar ao topo da página">
+                  Voltar ao topo
                 </a>
               </li>
               <li>
-                <a href="#sobre" className="hover:text-card transition-colors">
-                  Sobre
-                </a>
+                <Link href="/sobre" className="hover:text-card transition-colors">
+                  Página Sobre
+                </Link>
               </li>
               <li>
-                <a href="#servicos" className="hover:text-card transition-colors">
-                  Serviços
-                </a>
+                <Link href="/servicos" className="hover:text-card transition-colors">
+                  Nossos Serviços
+                </Link>
               </li>
               <li>
-                <a href="#contato" className="hover:text-card transition-colors">
-                  Contato
-                </a>
+                <Link href="/contato" className="hover:text-card transition-colors">
+                  Entre em Contato
+                </Link>
               </li>
             </ul>
           </div>

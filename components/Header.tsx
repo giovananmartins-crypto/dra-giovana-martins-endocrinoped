@@ -31,7 +31,8 @@ export const Header = () => {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-elemento.png"
+                src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-elemento-80.png"
+                srcSet="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-elemento-80.png 1x, /images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-elemento.png 2x"
                 alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
                 width={80}
                 height={80}
