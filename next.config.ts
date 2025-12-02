@@ -92,7 +92,7 @@ const nextConfig: NextConfig = {
     // Otimizações de CSS
     optimizeCss: true,
     // Otimizações de bundle
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-slot', '@radix-ui/react-toast'],
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-slot', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
   },
 };
 

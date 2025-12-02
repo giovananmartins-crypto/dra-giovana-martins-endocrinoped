@@ -39,6 +39,17 @@
     "zod": "^4.1.13",
     "zustand": "^5.0.8"
   },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "not op_mini all",
+    "Chrome >= 80",
+    "Firefox >= 74",
+    "Safari >= 13.1",
+    "Edge >= 80"
+  ],
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@testing-library/jest-dom": "^6.9.1",
