@@ -4,16 +4,18 @@ import Script from "next/script";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { PerformanceLinks } from "@/components/PerformanceLinks";
+import { PerformanceLinksHead } from "@/components/PerformanceLinksHead";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap', // Otimiza carregamento de fontes
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap', // Otimiza carregamento de fontes
 });
 
 export const metadata: Metadata = {
@@ -89,17 +91,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <PerformanceLinksHead />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Performance Links - Preconnect para GTM */}
-        {/* IMPORTANTE: Apenas GTM - ele gerencia GA4 e Google Ads internamente */}
-        {/* NÃO adicionar preconnect para google-analytics.com - evitaria duplicação */}
-        <PerformanceLinks />
         {/* Google Tag Manager - Script no Head (via Next.js Script) */}
+        {/* Usando lazyOnload para reduzir impacto no LCP - GTM não é crítico para primeira renderização */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

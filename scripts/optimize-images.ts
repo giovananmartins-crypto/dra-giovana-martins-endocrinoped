@@ -8,20 +8,9 @@
  */
 
 import { readdir, stat, readFile, writeFile } from 'fs/promises';
-import { join, dirname } from 'path';
+import { join } from 'path';
 import { existsSync } from 'fs';
-
-// Verificar se sharp está instalado
-let sharp: any;
-try {
-  sharp = require('sharp');
-} catch (error) {
-  console.error('❌ ERRO: A biblioteca "sharp" não está instalada.');
-  console.error('📦 Instale com: npm install --save-dev sharp');
-  console.error('\n💡 Alternativa: Use ferramentas online como TinyPNG ou Squoosh');
-  console.error('   Ver guia: docs/GUIA_OTIMIZACAO_IMAGENS.md\n');
-  process.exit(1);
-}
+import sharp from 'sharp';
 
 const MAX_SIZE_KB = 200;
 const MAX_SIZE_BYTES = MAX_SIZE_KB * 1024;
