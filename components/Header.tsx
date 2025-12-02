@@ -24,47 +24,18 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-md border-b border-border shadow-soft">
       <div className="container mx-auto px-4 -py-[2.5px]">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-0">
+          <Link href="/" className="flex items-center">
             <div 
-              className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 -my-2 md:-my-3 flex items-center justify-center"
+              className="h-16 md:h-20 flex items-center justify-center"
               suppressHydrationWarning
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-elemento-80.png"
-                srcSet="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-elemento-80.png 1x, /images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-elemento.png 2x"
+                src="/images/Logo/dra-giovana-martins-endocrinologista-pediatrica-bh-logo.png"
                 alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
-                width={80}
-                height={80}
-                className="object-contain w-full h-full"
-                loading="eager"
-              />
-            </div>
-            <div 
-              className="hidden md:block h-20 mt-2 -mb-4 -ml-[24px] flex items-center"
-              suppressHydrationWarning
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-nome.png"
-                alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
-                width={400}
-                height={80}
-                className="h-full w-auto object-contain object-left"
-                loading="eager"
-              />
-            </div>
-            <div 
-              className="md:hidden h-5 flex items-center"
-              suppressHydrationWarning
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-nome-mobile.png"
-                alt="Dra. Giovana Martins"
                 width={200}
-                height={20}
-                className="h-full w-auto object-contain object-left"
+                height={80}
+                className="h-full w-auto object-contain"
                 loading="eager"
               />
             </div>
