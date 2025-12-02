@@ -69,8 +69,8 @@ export const BlogPreviewSection = () => {
                   className="w-full justify-between group"
                   asChild
                 >
-                  <Link href={`/blog/${post.slug}`}>
-                    Ler mais
+                  <Link href={`/blog/${post.slug}`} aria-label={`Ler mais sobre: ${post.title}`}>
+                    Ler mais sobre {post.category.toLowerCase()}
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>

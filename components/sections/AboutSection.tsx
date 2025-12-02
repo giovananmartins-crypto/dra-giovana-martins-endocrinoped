@@ -153,18 +153,18 @@ export const AboutSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent z-10 pointer-events-none" />
               
               {/* Dots indicator */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-20">
                 {images.map((_, index) => (
                   <button
                     key={index}
                     type="button"
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`h-2 rounded-full transition-all ${
+                    className={`h-3 w-3 rounded-full transition-all min-w-[12px] min-h-[12px] ${
                       index === currentImageIndex
-                        ? "bg-card w-6"
-                        : "bg-card/50 hover:bg-card/75 w-2"
+                        ? "bg-card w-8"
+                        : "bg-card/50 hover:bg-card/75"
                     }`}
-                    aria-label={`Ir para imagem ${index + 1}`}
+                    aria-label={`Ir para imagem ${index + 1} do carrossel`}
                   />
                 ))}
               </div>
