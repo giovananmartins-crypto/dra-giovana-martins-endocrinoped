@@ -113,9 +113,9 @@ export default function Home() {
       ))}
       <Header />
       <main>
-        {/* Hero crítico renderiza H1 imediatamente (server component) */}
+        {/* HeroSectionCritical renderiza tudo estático (server component) */}
         <HeroSectionCritical />
-        {/* Hero interativo carrega após (client component) */}
+        {/* HeroSection adiciona interatividade (client component) */}
         <HeroSection />
         <PillarsSection />
         <ServicesSection />

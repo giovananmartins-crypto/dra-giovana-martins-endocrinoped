@@ -1,91 +1,66 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Calendar, Heart } from "lucide-react";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { analytics } from "@/lib/analytics";
 
+/**
+ * HeroSection - Client Component
+ * Adiciona interatividade aos elementos já renderizados pelo HeroSectionCritical
+ * Não renderiza nada novo, apenas adiciona event handlers e ícones
+ */
 export const HeroSection = () => {
-  const [isHydrated, setIsHydrated] = useState(false);
-  
   useEffect(() => {
-    setIsHydrated(true);
+    // Adicionar ícone Heart ao badge
+    const badge = document.querySelector('#inicio .inline-flex.items-center');
+    if (badge && !badge.querySelector('svg')) {
+      const heartIcon = document.createElement('div');
+      heartIcon.innerHTML = '<svg class="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>';
+      const firstChild = heartIcon.firstChild;
+      if (firstChild && badge.firstChild) {
+        badge.insertBefore(firstChild, badge.firstChild);
+      }
+    }
+
+    // Adicionar ícone Calendar ao botão primário e event handlers
+    const ctaPrimary = document.getElementById('hero-cta-primary');
+    if (ctaPrimary && !ctaPrimary.querySelector('svg')) {
+      const calendarIcon = document.createElement('div');
+      calendarIcon.innerHTML = '<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>';
+      const firstChild = calendarIcon.firstChild;
+      if (firstChild) {
+        ctaPrimary.insertBefore(firstChild, ctaPrimary.firstChild);
+      }
+      ctaPrimary.classList.add('flex', 'items-center', 'justify-center');
+      
+      ctaPrimary.addEventListener('click', (e) => {
+        e.preventDefault();
+        const element = document.getElementById('contato');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+        analytics.ctaClick('Hero - Agende Agora');
+      });
+    }
+
+    // Adicionar event handler ao botão secundário
+    const ctaSecondary = document.getElementById('hero-cta-secondary');
+    if (ctaSecondary) {
+      ctaSecondary.addEventListener('click', (e) => {
+        e.preventDefault();
+        const element = document.getElementById('sobre');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    // Adicionar animações após hidratação
+    const heroContent = document.querySelector('#inicio .space-y-6');
+    const heroImage = document.querySelector('#inicio .relative:has(.aspect-\\[4\\/5\\])');
+    if (heroContent) heroContent.classList.add('animate-slide-in-left');
+    if (heroImage) heroImage.classList.add('animate-slide-in-right');
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  return (
-    <div className="container mx-auto px-4 -mt-48 md:-mt-56">
-      <div className="grid md:grid-cols-2 gap-12 items-start">
-        {/* Badge e botões - carregam após hidratação, posicionados sobre o HeroSectionCritical */}
-        <div className={`space-y-6 text-center ${isHydrated ? 'animate-slide-in-left' : ''}`}>
-          <div className="flex justify-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-card/50 backdrop-blur-sm rounded-full text-sm">
-              <Heart className="h-4 w-4 text-primary" fill="currentColor" />
-              <span className="text-foreground">Cuidado especializado em Belo Horizonte</span>
-            </div>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg"
-              className="bg-foreground text-card hover:bg-foreground/90 gap-2 text-lg px-8 py-6"
-              onClick={() => scrollToSection("contato")}
-            >
-              <Calendar className="h-5 w-5" />
-              Agende Agora
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2 border-foreground text-foreground hover:bg-foreground/10 text-lg px-8 py-6"
-              onClick={() => scrollToSection("sobre")}
-            >
-              Conheça a Dra. Giovana Martins
-            </Button>
-          </div>
-
-          <div className="flex flex-wrap gap-8 pt-6 justify-center">
-            <div className="space-y-1">
-              <div className="text-3xl font-bold text-foreground">100%</div>
-              <div className="text-sm text-foreground/70">Atendimento humanizado</div>
-            </div>
-            <div className="space-y-1">
-              <div className="text-3xl font-bold text-foreground">500+</div>
-              <div className="text-sm text-foreground/70">Famílias atendidas</div>
-            </div>
-            <div className="space-y-1">
-              <div className="text-3xl font-bold text-foreground">100%</div>
-              <div className="text-sm text-foreground/70">Dedicação ao cuidado</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Imagem - posicionada sobre o placeholder do HeroSectionCritical */}
-        <div className={`relative ${isHydrated ? 'animate-slide-in-right' : ''}`}>
-          <div className="aspect-[4/5] rounded-3xl shadow-medium overflow-hidden relative max-w-md mx-auto">
-            <Image
-              src="/images/dra-giovana/23-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg"
-              alt="Dra. Giovana Martins - Endocrinologista Pediátrica em Belo Horizonte"
-              fill
-              className="object-cover rounded-3xl"
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent" />
-          </div>
-          
-          {/* Decorative elements */}
-          <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/30 rounded-full blur-2xl" />
-          <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary/30 rounded-full blur-2xl" />
-        </div>
-      </div>
-    </div>
-  );
+  return null; // Não renderiza nada, apenas adiciona interatividade
 };
 
