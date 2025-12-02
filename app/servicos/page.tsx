@@ -36,7 +36,7 @@ const servicesFAQs = [
   },
   {
     question: "Como agendar uma consulta para um serviço específico?",
-    answer: "Você pode agendar uma consulta através do telefone (31) 99562-6630, WhatsApp (31) 99562-6630, ou preenchendo o formulário de contato. Nossa equipe entrará em contato para confirmar o melhor horário e entender qual serviço você precisa."
+    answer: "Você pode agendar uma consulta através do telefone (31) 97264-8155, WhatsApp (31) 97264-8155, ou preenchendo o formulário de contato. Nossa equipe entrará em contato para confirmar o melhor horário e entender qual serviço você precisa."
   },
   {
     question: "A primeira consulta é diferente para cada serviço?",

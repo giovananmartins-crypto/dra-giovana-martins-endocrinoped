@@ -35,7 +35,7 @@ const defaultFaqs: FAQItem[] = [
   },
   {
     question: "Como agendar uma consulta?",
-    answer: "Você pode agendar uma consulta através do telefone (31) 99562-6630, WhatsApp (31) 99562-6630, ou preenchendo o formulário de contato em nossa página. Nossa equipe entrará em contato para confirmar o melhor horário disponível."
+    answer: "Você pode agendar uma consulta através do telefone (31) 97264-8155, WhatsApp (31) 97264-8155, ou preenchendo o formulário de contato em nossa página. Nossa equipe entrará em contato para confirmar o melhor horário disponível."
   }
 ];
 
@@ -150,7 +150,7 @@ export const FAQSection = ({
                         </Link>
                       </Button>
                       <Button variant="outline" size="sm" asChild>
-                        <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="FAQ Section">
+                        <WhatsAppLink href="https://wa.me/5531972648155" target="_blank" rel="noopener noreferrer" label="FAQ Section">
                           WhatsApp
                         </WhatsAppLink>
                       </Button>

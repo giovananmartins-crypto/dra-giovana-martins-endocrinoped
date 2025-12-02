@@ -58,7 +58,7 @@ export const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contato</h3>
             <ul className="space-y-2 text-card/80">
-              <li>(31) 99562-6630</li>
+              <li>(31) 97264-8155</li>
               <li>contato@giovanaendocrinoped.com.br</li>
               <li>Belo Horizonte - MG</li>
               <li className="mt-[65px]">
@@ -99,7 +99,7 @@ export const Footer = () => {
                     />
                   </Link>
                   <Link
-                    href="https://wa.me/5531995626630"
+                    href="https://wa.me/5531972648155"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 hover:opacity-80 transition-opacity flex items-center justify-center"

@@ -30,7 +30,7 @@ export const metadata: Metadata = generateMetadata({
 const contactFAQs = [
   {
     question: "Como posso agendar uma consulta?",
-    answer: "Você pode agendar uma consulta através do telefone (31) 99562-6630, WhatsApp (31) 99562-6630, ou preenchendo o formulário de contato em nossa página. Nossa equipe entrará em contato para confirmar o melhor horário disponível."
+    answer: "Você pode agendar uma consulta através do telefone (31) 97264-8155, WhatsApp (31) 97264-8155, ou preenchendo o formulário de contato em nossa página. Nossa equipe entrará em contato para confirmar o melhor horário disponível."
   },
   {
     question: "Quais são os horários de atendimento?",
@@ -91,7 +91,7 @@ export default function Contact() {
                   className="bg-foreground text-card hover:bg-foreground/90 gap-2 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
                   asChild
                 >
-                  <PhoneLink href="tel:+5531995626630" label="Contact Page Hero">
+                  <PhoneLink href="tel:+5531972648155" label="Contact Page Hero">
                     <Phone className="h-5 w-5" />
                     Ligar Agora
                   </PhoneLink>
@@ -102,7 +102,7 @@ export default function Contact() {
                   className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-card text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
                   asChild
                 >
-                  <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Contact Page Hero">
+                  <WhatsAppLink href="https://wa.me/5531972648155" target="_blank" rel="noopener noreferrer" label="Contact Page Hero">
                     <MessageCircle className="h-5 w-5" />
                     WhatsApp
                   </WhatsAppLink>
@@ -150,7 +150,7 @@ export default function Contact() {
                       <div className="flex-1">
                         <h3 className="font-bold text-foreground mb-2 text-lg">Telefone</h3>
                         <p className="text-muted-foreground mb-4 text-lg font-semibold">
-                          (31) 99562-6630
+                          (31) 97264-8155
                         </p>
                         <Button
                           variant="default"
@@ -158,7 +158,7 @@ export default function Contact() {
                           className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                           asChild
                         >
-                          <PhoneLink href="tel:+5531995626630" label="Contact Page Card">
+                          <PhoneLink href="tel:+5531972648155" label="Contact Page Card">
                             <Phone className="h-4 w-4 mr-2" />
                             Ligar Agora
                           </PhoneLink>
@@ -184,7 +184,7 @@ export default function Contact() {
                       <div className="flex-1">
                         <h3 className="font-bold text-foreground mb-2 text-lg">WhatsApp</h3>
                         <p className="text-muted-foreground mb-4 text-lg font-semibold">
-                          (31) 99562-6630
+                          (31) 97264-8155
                         </p>
                         <Button
                           variant="default"
@@ -192,7 +192,7 @@ export default function Contact() {
                           className="w-full bg-green-500 text-white hover:bg-green-600"
                           asChild
                         >
-                          <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Contact Page Card">
+                          <WhatsAppLink href="https://wa.me/5531972648155" target="_blank" rel="noopener noreferrer" label="Contact Page Card">
                             <div 
                               className="w-4 h-4 mr-2 bg-contain bg-center bg-no-repeat"
                               style={{

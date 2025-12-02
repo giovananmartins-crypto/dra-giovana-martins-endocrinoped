@@ -45,7 +45,7 @@ export const CTASection = () => {
               className="border-2 border-foreground text-foreground hover:bg-foreground/10 text-lg px-8 py-6 gap-2"
               asChild
             >
-              <a href="tel:+5531995626630" onClick={() => analytics.phoneCall('CTA Section')}>
+              <a href="tel:+5531972648155" onClick={() => analytics.phoneCall('CTA Section')}>
                 <Phone className="h-5 w-5" />
                 Ligar Agora
               </a>
@@ -57,7 +57,7 @@ export const CTASection = () => {
               className="border-2 border-foreground text-foreground hover:bg-foreground/10 text-lg px-8 py-6 gap-2"
               asChild
             >
-              <a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" onClick={() => analytics.whatsappClick('CTA Section')}>
+              <a href="https://wa.me/5531972648155" target="_blank" rel="noopener noreferrer" onClick={() => analytics.whatsappClick('CTA Section')}>
                 <MessageCircle className="h-5 w-5" />
                 WhatsApp
               </a>

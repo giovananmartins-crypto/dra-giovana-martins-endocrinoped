@@ -9,7 +9,7 @@ export function LocalBusinessSchema() {
     "name": "Dra. Giovana Martins - Endocrinologista Pediátrica",
     "image": "https://www.giovanaendocrinoped.com.br/images/dra-giovana/01-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg",
     "url": "https://www.giovanaendocrinoped.com.br/",
-    "telephone": "+55-31-99562-6630",
+    "telephone": "+55-31-97264-8155",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "R. Turquesa, 347 - Prado",
@@ -61,7 +61,7 @@ export function PhysicianSchema() {
     "specialty": "Endocrinologia Pediátrica",
     "medicalSpecialty": "https://schema.org/Endocrinology",
     "url": "https://www.giovanaendocrinoped.com.br/",
-    "telephone": "+55-31-99562-6630",
+    "telephone": "+55-31-97264-8155",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "R. Turquesa, 347 - Prado",

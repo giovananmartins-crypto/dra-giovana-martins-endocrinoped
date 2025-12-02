@@ -170,7 +170,7 @@ export default function PuberdadePrecocePage() {
                     className="border-2 border-foreground text-foreground hover:bg-foreground/10 text-lg px-8 py-6 gap-2"
                     asChild
                   >
-                    <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Puberdade Precoce - Hero">
+                    <WhatsAppLink href="https://wa.me/5531972648155" target="_blank" rel="noopener noreferrer" label="Puberdade Precoce - Hero">
                       <MessageCircle className="h-5 w-5" />
                       Fale via WhatsApp
                     </WhatsAppLink>
@@ -595,7 +595,7 @@ export default function PuberdadePrecocePage() {
                   className="border-2 border-primary text-primary hover:bg-primary/10 gap-2 text-lg px-8 py-6"
                   asChild
                 >
-                  <PhoneLink href="tel:+5531995626630" label="Puberdade Precoce - CTA">
+                  <PhoneLink href="tel:+5531972648155" label="Puberdade Precoce - CTA">
                     <Phone className="h-5 w-5" />
                     Ligar Agora
                   </PhoneLink>
@@ -607,7 +607,7 @@ export default function PuberdadePrecocePage() {
                   className="border-2 border-primary text-primary hover:bg-primary/10 gap-2 text-lg px-8 py-6"
                   asChild
                 >
-                  <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Puberdade Precoce - CTA">
+                  <WhatsAppLink href="https://wa.me/5531972648155" target="_blank" rel="noopener noreferrer" label="Puberdade Precoce - CTA">
                     <MessageCircle className="h-5 w-5" />
                     WhatsApp
                   </WhatsAppLink>

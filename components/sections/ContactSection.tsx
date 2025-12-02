@@ -123,7 +123,7 @@ export const ContactSection = () => {
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           className="w-full h-12"
-          placeholder="(31) 99999-9999"
+          placeholder="(31) 97264-8155"
         />
       </div>
 

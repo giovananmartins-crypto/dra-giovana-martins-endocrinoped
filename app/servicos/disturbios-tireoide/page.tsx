@@ -166,7 +166,7 @@ export default function DisturbiosTireoidePage() {
                     className="border-2 border-foreground text-foreground hover:bg-foreground/10 text-lg px-8 py-6 gap-2"
                     asChild
                   >
-                    <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Distúrbios Tireoide - Hero">
+                    <WhatsAppLink href="https://wa.me/5531972648155" target="_blank" rel="noopener noreferrer" label="Distúrbios Tireoide - Hero">
                       <MessageCircle className="h-5 w-5" />
                       Fale via WhatsApp
                     </WhatsAppLink>
@@ -600,7 +600,7 @@ export default function DisturbiosTireoidePage() {
                   className="border-2 border-primary text-primary hover:bg-primary/10 gap-2 text-lg px-8 py-6"
                   asChild
                 >
-                  <PhoneLink href="tel:+5531995626630" label="Distúrbios Tireoide - CTA">
+                  <PhoneLink href="tel:+5531972648155" label="Distúrbios Tireoide - CTA">
                     <Phone className="h-5 w-5" />
                     Ligar Agora
                   </PhoneLink>
@@ -612,7 +612,7 @@ export default function DisturbiosTireoidePage() {
                   className="border-2 border-primary text-primary hover:bg-primary/10 gap-2 text-lg px-8 py-6"
                   asChild
                 >
-                  <WhatsAppLink href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" label="Distúrbios Tireoide - CTA">
+                  <WhatsAppLink href="https://wa.me/5531972648155" target="_blank" rel="noopener noreferrer" label="Distúrbios Tireoide - CTA">
                     <MessageCircle className="h-5 w-5" />
                     WhatsApp
                   </WhatsAppLink>
