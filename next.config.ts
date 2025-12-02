@@ -91,6 +91,8 @@ const nextConfig: NextConfig = {
   experimental: {
     // Otimizações de CSS
     optimizeCss: true,
+    // Otimizações de bundle
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-slot', '@radix-ui/react-toast'],
   },
 };
 
