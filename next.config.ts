@@ -78,6 +78,20 @@ const nextConfig: NextConfig = {
   // Otimizações de compilação
   // swcMinify é padrão no Next.js 13+ e não precisa ser especificado
   reactStrictMode: true,
+  
+  // Otimizações de compilação para reduzir JavaScript legado
+  compiler: {
+    // Remove console.log em produção
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
+  
+  // Configuração experimental para melhorar performance
+  experimental: {
+    // Otimizações de CSS
+    optimizeCss: true,
+  },
 };
 
 export default nextConfig;

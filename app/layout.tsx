@@ -4,7 +4,6 @@ import Script from "next/script";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { PerformanceLinksHead } from "@/components/PerformanceLinksHead";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -92,7 +91,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <PerformanceLinksHead />
+        {/* Performance Links - Preconnect para GTM (server-side) */}
+        {/* IMPORTANTE: Apenas GTM - ele gerencia GA4 e Google Ads internamente */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
