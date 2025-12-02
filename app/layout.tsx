@@ -97,13 +97,7 @@ export default function RootLayout({
         {/* Estratégia 1: Links estáticos no head ANTES de qualquer script (mais confiável para PageSpeed) */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        {/* Preload da imagem LCP (hero) - melhora LCP significativamente */}
-        <link
-          rel="preload"
-          href="/images/dra-giovana/23-dra-giovana-martins-endocrinologista-pediatrica-bh.jpeg"
-          as="image"
-          fetchPriority="high"
-        />
+        {/* Nota: Preload da imagem não é necessário - Next.js Image com priority já faz isso automaticamente */}
         {/* CSS crítico inline para hero - reduz bloqueio de renderização */}
         <style dangerouslySetInnerHTML={{
           __html: `

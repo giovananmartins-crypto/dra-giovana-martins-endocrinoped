@@ -22,20 +22,20 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-md border-b border-border shadow-soft">
-      <div className="container mx-auto px-4 -py-[2.5px]">
+      <div className="container mx-auto px-6 md:px-8 lg:px-10 -py-[2.5px]">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <div 
-              className="h-16 md:h-20 flex items-center justify-center"
+              className="h-32 md:h-36 lg:h-40 flex items-center justify-center mb-0"
               suppressHydrationWarning
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/Logo/dra-giovana-martins-endocrinologista-pediatrica-bh-logo.png"
                 alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
-                width={200}
-                height={80}
-                className="h-full w-auto object-contain"
+                width={400}
+                height={160}
+                className="h-full w-auto object-contain mb-0"
                 loading="eager"
               />
             </div>
