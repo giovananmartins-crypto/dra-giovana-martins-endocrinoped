@@ -1,4 +1,3 @@
-import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { PillarsSection } from "@/components/sections/PillarsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
@@ -7,7 +6,7 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { BlogPreviewSection } from "@/components/sections/BlogPreviewSection";
 import { CTASection } from "@/components/sections/CTASection";
-import { Footer } from "@/components/Footer";
+import { Header, Footer } from "@/components/ClientHeaderFooter";
 import { LocalBusinessSchema, PhysicianSchema, PersonSchema, FAQPageSchema, ReviewSchema } from "@/lib/schema-markup";
 import { generateMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";

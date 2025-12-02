@@ -5,7 +5,6 @@ import { Calendar, Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 import { analytics } from "@/lib/analytics";
 
 const navItems = [
@@ -26,34 +25,46 @@ export const Header = () => {
       <div className="container mx-auto px-4 -py-[2.5px]">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-0">
-            <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 -my-2 md:-my-3 flex items-center justify-center">
+            <div 
+              className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 -my-2 md:-my-3 flex items-center justify-center"
+              suppressHydrationWarning
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-elemento.png"
                 alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
-                className="w-full h-full object-contain"
-                style={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' }}
-                suppressHydrationWarning
+                width={80}
+                height={80}
+                className="object-contain w-full h-full"
+                loading="eager"
               />
             </div>
-            <div className="hidden md:block h-20 mt-2 -mb-4 -ml-[24px] flex items-center">
+            <div 
+              className="hidden md:block h-20 mt-2 -mb-4 -ml-[24px] flex items-center"
+              suppressHydrationWarning
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-nome.png"
                 alt="Dra. Giovana Martins - Endocrinologista Pediátrica"
+                width={400}
+                height={80}
                 className="h-full w-auto object-contain object-left"
-                style={{ maxHeight: '100%', width: 'auto' }}
-                suppressHydrationWarning
+                loading="eager"
               />
             </div>
-            <div className="md:hidden h-5 flex items-center">
+            <div 
+              className="md:hidden h-5 flex items-center"
+              suppressHydrationWarning
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/icons/dra-giovana-martins-endocrinologista-pediatrica-bh-nome.png"
                 alt="Dra. Giovana Martins"
+                width={200}
+                height={20}
                 className="h-full w-auto object-contain object-left"
-                style={{ maxHeight: '100%', width: 'auto' }}
-                suppressHydrationWarning
+                loading="eager"
               />
             </div>
           </Link>
